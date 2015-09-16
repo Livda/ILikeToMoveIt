@@ -1,2 +1,2 @@
 # ILikeToMoveIt
-A student project from INSA's students in 4th year. The web-application will help the mobility management.
+4th year project at INSA Rennes. The web-application will help the mobility management.
