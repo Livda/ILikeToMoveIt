@@ -1,13 +1,84 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8x]{inputenc}
+\usepackage[frenchb]{babel}
 \usepackage{ucs}
-\usepackage{graphicx}
+\usepackage[pdftex]{graphicx}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
 \title{Rapport de pré-étude}
 \begin{document}
-	\part{Le projet}
 	
-		\section{Quel est son rôle ?}
+	\begin{titlepage}
+		\begin{sffamily}
+			\begin{center}
+				
+				% Upper part of the page. The '~' is needed because \\
+				% only works if a paragraph has started.
+				\includegraphics[width=400pt]{logo_INSA.png}~\\[2.5cm]
+				
+				\textsc{\huge Rapport de pré-étude}\\[2.5cm]
+				
+				% Title
+				\HRule \\[0.4cm]
+				{ \huge \bfseries Système de gestion informatisée des mobilités\\[0.4cm] }
+				
+				\HRule \\[4cm]
+				
+				% Author and supervisor
+				\begin{minipage}{0.4\textwidth}
+					\begin{flushleft} \large
+						\emph{Étudiants :}
+						Jean \textsc{Chorin}\\
+						Damien \textsc{Duvacher}\\
+						Aurélien \textsc{Fontaine}\\
+						Étienne \textsc{Geantet}\\
+						Thomas \textsc{Hareau}\\
+						Arnaud \textsc{Martin}\\
+					\end{flushleft}
+				\end{minipage}
+				\begin{minipage}{0.5\textwidth}
+					\begin{flushright} \large
+						\emph{Encadrants :} \\
+						M. Parlavantaz\\
+						M. Raymond
+					\end{flushright}
+				\end{minipage}
+				
+				\vfill
+				
+				% Bottom of the page
+				{\large Année 2015 - 2016}
+				
+			\end{center}
+		\end{sffamily}
+	\end{titlepage}
+	
+	\part{Introduction}
+	
+	
+	\part{Le projet}
+	 Lors de leur 4ème année d'étude, les étudiants de l'INSA de Rennes doivent réaliser un projet. Notre groupe a choisi le sujet "Système de gestion informatisé des mobilités". Nous allons donc développer une application facilitant le traitement des étudiants et de réduire la perte de papier due aux nombreuses impressions nécessaires.
+		
 		\section{Les exigences / Le cahier des charges}
+		
+		Ce projet doit aboutir sur une application web permettant aux étudiants d'entrer leurs vœux de mobilités, de leur affecter automatiquement une destination et de faciliter le transfert de documents entre le service RI (Relations Internationales) de chaque département de l'INSA. Tout ceci doit se passer en trois temps.
+		
+		 \subsection{Le choix des destinations de départ et leur affectation}
+		 
+		 \subsubsection{Côté étudiant}
+		 
+		 L'étudiant doit pouvoir choisir un ou plusieurs des destinations parmi toutes celles possibles. Lors de son choix, il pourra consulter des commentaires laissés par le RI ou par d'anciens élèves. De plus, toutes ces destinations devront être classées par ordre de préférence de l'étudiant.
+		 
+		 Ce choix doit pouvoir être modifié, tant niveau du classement que des destinations, jusqu'au dernier moment.
+		 
+		\subsubsection{Côté RI}
+		
+		En début d'année, les correspondants RI doivent entrer la liste des étudiants ainsi que leur classement plus tard. 
+		
+		Ils doivent aussi pouvoir mettre à jour la liste des choix en fonction de l'évolution des partenariats entre les différentes écoles. Pour chacune des destinations proposées, ils peuvent mettre un commentaire permettant aux étudiants d'orienter leurs choix par la suite.
 	
 	\part{Ce qui existe}
 	
