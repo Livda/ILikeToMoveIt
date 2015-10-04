@@ -1,8 +1,16 @@
 \section{La gestion de la base de donnée}
 
-% ceci est un brouillon
-- mysql
-- mariadb
-- postgresql
+L'utilisation du framework \symfony nous permet en grande partie d'abstraire la question de la base de donnée : il n'y aura aucune requête en \sql dans notre code. 
+Le choix du système de gestion de base de donnée n'est cependant pas  à négliger, puisque les performances du site web peuvent être grandement affectées par un mauvais choix de système de gestion. 
 
-mysql  est une solution open source, rachetée par Oracle. Fork par Widenius qui s'appelle  
+Le prototype déjà existant utilisait \mysql. 
+De plus, lors de notre réunion avec les agents du \textit{Centre des Ressources en Informatique} (CRI), il nous a été conseillé de choisir entre ce système et \psql. 
+Le choix le plus simple serait donc de continuer avec ce qui a déjà été utilisé. 
+Cependant, le changement du système est extrêmement simple à effectuer, nous allons donc légitimement  discuter des avantages et inconvénients de ces deux logiciels, mais également de certains autres, extrêmement présent dans ce domaine. 
+
+% ceci est un brouillon
+%- mysql
+%- mariadb
+%- postgresql
+
+%mysql  est une solution open source, rachetée par Oracle. Fork par Widenius qui s'appelle  
