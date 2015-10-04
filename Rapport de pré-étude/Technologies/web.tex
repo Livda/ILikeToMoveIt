@@ -3,22 +3,34 @@ Le choix technologique central de notre projet est le choix du langage côté se
 Pour des questions de rapidité de développement, un prototype fonctionnel nous étant demandé pour fin décembre, nous avons restreint nos choix à deux technologies: Java EE, pour sa prise en main facile et sa maitrise par certains membres de l'équipe et PHP pour sa rapidité d'apprentissage, mais essentiellement car comme vous l'avez vu dans la partie 2, nous possédons un début de prototype développé en PHP sous le framework Symfony2.
 
 piti tableau:
-Java ee 
-                       
-Rapidité d'apprentissage:     ++ un seul langage à maîtriser
- 
-Gestion de la base de donnée:  - toutes les classes de lecture et d'écriture à développer, et création des classes pour le pattern DAO (Data Access Object)
 
-Rapidité de développement: ++Rapide, mais nous repartons de zéro
-
-
-PPH avec Symfony2
-  
-Rapidité d'apprentissage:   + un langage et une méthode de développement pour respecter les normes Symfony2
-
-Gestion de la base de données:  ++ tout est géré automatiquement par Doctrine, une fonctionnalité de Symfony2, quelques méthodes d'accès sont à redéfinir mais c'est minime
-
-Rapidité de développement: +++ Rapide, et nous possédons de bonnes bases
+\begin{tabular}{|m{125pt}|m{150pt}|m{150pt}|}
+	\hline
+	\null & \textbf{Java EE} & \textbf{Symfony} \\
+	\hline
+	Rapidité d'apprentissage & Un  seul langage à maîtriser & Un langage et une norme pour simplifier le développement\\
+	\hline
+	Gestion de la base de données & Toutes les classes de lecture et d'écriture sont à développer, et la création des classes pour le pattern DAO (Data Acces Object) & Tout est géré automatiquement par Doctrine, une fonctionnalité de Symfony. Il y a quelques méthodes d'accès à redéfinir, mais le travail est minime\\
+	\hline
+	Rapidité de développement & Rapide mais nous repartons de zéro & Rapide, et nous possédons de bonnes bases\\
+	\hline
+\end{tabular}
+%Java ee 
+%                       
+%Rapidité d'apprentissage:     ++ un seul langage à maîtriser
+% 
+%Gestion de la base de donnée:  - toutes les classes de lecture et d'écriture à développer, et création des classes pour le pattern DAO (Data Access Object)
+%
+%Rapidité de développement: ++Rapide, mais nous repartons de zéro
+%
+%
+%PPH avec Symfony2
+%  
+%Rapidité d'apprentissage:   + un langage et une méthode de développement pour respecter les normes Symfony2
+%
+%Gestion de la base de données:  ++ tout est géré automatiquement par Doctrine, une fonctionnalité de Symfony2, quelques méthodes d'accès sont à redéfinir mais c'est minime
+%
+%Rapidité de développement: +++ Rapide, et nous possédons de bonnes bases
 
 De plus, pour implémenter toutes les fonctionnalités dont l'on a besoin (remplissage de pdf, communication avec le CAS et le LPAD), Symfony possède une grande communauté, ce qui laisse envisager que des outils résolvant ces problématiques ont déjà été développés.
 Le dernier argument qui a tranché est le fait que la norme stricte de Symfony2 permet d'avoir une organisation et une reprise du travail d'autrui plus facilement.
