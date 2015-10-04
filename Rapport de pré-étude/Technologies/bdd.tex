@@ -1,12 +1,32 @@
 \section{La gestion de la base de donnée}
 
 L'utilisation du framework \symfony nous permet en grande partie d'abstraire la question de la base de donnée : il n'y aura aucune requête en \sql dans notre code. 
-Le choix du système de gestion de base de donnée n'est cependant pas  à négliger, puisque les performances du site web peuvent être grandement affectées par un mauvais choix de système de gestion. 
+Le choix du système de gestion de base de donnée (SGBD) n'est cependant pas  à négliger, puisque les performances du site web peuvent être grandement affectées par un mauvais choix de système de gestion. 
 
 Le prototype déjà existant utilisait \mysql. 
 De plus, lors de notre réunion avec les agents du \textit{Centre des Ressources en Informatique} (CRI), il nous a été conseillé de choisir entre ce système et \psql. 
 Le choix le plus simple serait donc de continuer avec ce qui a déjà été utilisé. 
 Cependant, le changement du système est extrêmement simple à effectuer, nous allons donc légitimement  discuter des avantages et inconvénients de ces deux logiciels, mais également de certains autres, extrêmement présent dans ce domaine. 
+
+\subsection{SqLite ou Oracle, deux solutions inappropriées}
+
+Nous commencerons premièrement par deux solutions qui ne sont pas adaptées à notre problème : Oracle Database et SqLite. 
+
+\paragraph*{Oracle Database } est un \textit{SGBD} créé par \textit{Larry Ellison}, et racheté depuis par Oracle Corporation. C'est aujourd'hui le système le plus utilisé dans le monde de l'entreprise, grâce aux fonctionnalités qu'il propose. 
+Cependant, les fonctionnalités supplémentaires sont utiles lors d'un nombre élevé d'utilisateurs en même temps, ou pour un grand nombre de données à stocker. Notre application ne connaitra jamais plus de 500 utilisateurs simultanées, et notre serveur sera limité en taille à 30 gigaoctets. Les plus d'Oracle ne nous seront donc pas utiles. 
+
+L'inconvénient majeur d'Oracle est le prix. Le logiciel est relativement cher, d'autant plus pour des propriétés inutiles dans notre cas.
+Nous ne nous tournerons donc pas vers cette solution, ni vers toute solutions payantes. Les SGBD dont nous parlerons maintenant seront donc tous gratuit. 
+
+
+\paragraph*{SqLite} est une bibliothèque légère, ce qui lui permet d'être facilement intégrée aux applications. C'est la bibliothèque la plus distribuée au monde, par example Firefox et Androïd l'utilisent. 
+
+
+S'il est possible de l'utiliser pour un site web, le logiciel n'a pas été prévu pour cet usage. L'utilisation simultanée par plusieurs utilisateurs ralentirait considérablement le fonctionnement de l'application. Nous ne retiendrons donc pas cette solution, nous tout autre système embarqué. 
+
+
+ 
+
 
 % ceci est un brouillon
 %- mysql
