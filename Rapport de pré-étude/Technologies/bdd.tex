@@ -24,8 +24,40 @@ Nous ne nous tournerons donc pas vers cette solution, ni vers toute solutions pa
 
 S'il est possible de l'utiliser pour un site web, le logiciel n'a pas été prévu pour cet usage. L'utilisation simultanée par plusieurs utilisateurs ralentirait considérablement le fonctionnement de l'application. Nous ne retiendrons donc pas cette solution, nous tout autre système embarqué. 
 
-
+\subsection{MySQL et MariaDB}
  
+ Comme indiqué en introduction, \mysql est le SGBD utilisé lors de la création du prototype. Ce système possédé par Oracle Corporation. Il est sous double licence libre et propriétaire. L'utilisation de \mysql peut donc être payante ou gratuite selon la nature du produit : propriétaire ou libre. Dans notre cas, nous utliserons l'API tierce de \symfony, nous n'utiliserons donc pas directement \mysql. Son utilisation sera donc gratuite. 
+ 
+ \mysql est un des SQBG les plus utilisé. Ainsi des sites web comme \textit{Google}, \textit{Yahoo}, ou encore \textit{Airbus}	l'utilisent. En effet, \mysql fait parti du quatuor \textit{LAMP} (Linux Apache MySQL PHP) fréquemment utilisé par les développeurs web, principalement en raison de son faible coût. 
+ 
+ \smallbreak
+ 
+ Les principaux avantages de \mysql sont les suivants : 
+ \begin{itemize}
+ \item Peu de modification à faire lorsque l'on passe le projet en production 
+ \item Certaines règles ne sont pas présentes dans d'autre SGBD (comme les vues). 
+ \item Efficace avec les faibles jeux de données. En effet, \mysql ne fait pas d'\textit{intégrité référentielle}, ce qui lui permet de gagner en rapidité, au dépend de l'intégrité de la base de donnée. Ainsi, si le site est utilisé par un nombre important d'utilisateurs, le risque d'erreur d'intégrité augmente. 
+ \end{itemize}
+
+Voyons maintenant les inconvénients :
+
+\begin{itemize}
+\item Documentation assez obscure. 
+\item Prends quelques écarts avec la norme SQL2003
+\item Moins efficace avec les gros jeux de données. 
+\end{itemize} 
+
+Citons une dernière critique majeure de \mysql, apparue lors du rachat du logiciel par Oracle. Le fait que le logiciel passe de libre à propriétaire a fait naitre de nombreuses craintes par la communauté du libre, auquel s'ajoute également un de ses créateurs Michael Widenius. Il faut savoir que la société Oracle fait généralement peur aux libristes. L'entreprise achète un certain nombre de projets libres. C'était le cas du projet Open Office, qui n'a pas connu de mise à jour majeure depuis son rachat. 
+
+C'était la crainte que le projet soit arrêté qui a incité Widenius à créer un fork, copie libre du logiciel sur laquelle travaille la communauté du libre. Le projet du nom de \textit{MariaDb}, accepte toute les fonctionnalités  de \mysql. 
+
+Actuellement, Oracle produit des mises à jours sans indiquer leur contenus. On n'en connait donc pas l'utilité réelle, et surtout cela ne permet pas de savoir quelles failles ont été découvertes. \mdb au contraire assure que les failles ont été corrigées. L'utilisation de ce système assure donc une certaine sureté au système. 
+
+De plus, de nombreuses fonctionnalités ont été ajoutées au système. Ainsi, \mdb assure avoir de meilleurs performances que \mysql, notamment lorsqu'elle est utilisée pour de la big data. Le principal inconvénient dont nous parlions en devient caduc. 
+
+\medbreak
+
+Ainsi, entre \mysql et \mdb, nous choisirons d'utiliser \mdb, pour ses meilleurs performances et sa plus grande sécurité. De plus, si le projet est amené à durer plusieurs années, le grand jeu de données ne sera pas problématique. Cependant, nous souhaitons quand même comparer \mdb avec \psql, qui semble également prometteur. 
 
 
 % ceci est un brouillon
