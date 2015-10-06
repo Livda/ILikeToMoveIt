@@ -62,9 +62,33 @@ De plus, de nombreuses fonctionnalités ont été ajoutées au système. Ainsi, 
 Ainsi, entre \mysql et \mdb, nous choisirons d'utiliser \mdb, pour ses meilleurs performances et sa plus grande sécurité. De plus, si le projet est amené à durer plusieurs années, le jeu de données, qui augmentera en taille, ne sera pas problématique. Cependant, nous souhaitons quand même comparer \mdb avec \psql, qui semble également prometteur. 
 
 
-% ceci est un brouillon
-%- mysql
-%- mariadb
-%- postgresql
+\subsection{PostgreSQL}
 
-%mysql  est une solution open source, rachetée par Oracle. Fork par Widenius qui s'appelle  
+\psql est un SGBD très apprécié des développeurs. C'était d'ailleurs le système qui nous avait été enseigné en deuxième année, lors du module d'initiation aux bases de données. 
+
+Contrairement à \mysql, le projet est libre. Par conséquent, son utilisation est gratuite\footnote{sous licence BSD}. De plus, la communauté qui gère ce projet est très active, ce qui permet un développement réactif et une correction rapide aux différentes failles de sécurité qui peuvent être découverte. 
+Enfin, chaque version est entièrement testée avant sa sortie. \psql est ainsi un SGBD sûr. 
+
+Voyons maintenant les avantages de \psql par rapport à \mdb : 
+
+\begin{itemize}
+\item C'est le SGBD qui respecte le plus la norme SQL2003. Il est ainsi plus universel que \mdb
+\item Une documentation très claire (ce qui n'est pas à prendre en compte dans notre cas, puisque \symfony abstrait l'utilisation direct du SGBD)
+\item Extrêmement stable, comme précisé plus haut. 
+\item Extrêmement efficace avec les gros jeux de données. Ainsi, \textit{Météo France} l'utilise pour gérer plus de 4 To de données. Notons que cet avantage n'est pas à prendre en compte non plus : nous ne gérerons jamais plus de 30 go. 
+\item La cohérence de la base est garantie
+\end{itemize}
+
+\psql a néanmoins quelques inconvénients majeurs  par rapport à \mdb : 
+
+\begin{itemize}
+\item Il est inutilisable tel quel en production. Il faudra donc attentivement configurer le système. 
+\item Il nécessite une maintenance en production pour que la base reste efficace. 
+\item Il est moins efficace avec les très petites bases de données.  
+\end{itemize}
+
+\bigbreak
+Ainsi, il semble que \psql ne soit pas le SGBD le plus adapté à notre projet, mais plus pour les projets demandant de plus grosses bases de données. 
+Les principaux avantages de ce système ne nous seront pas utiles. De plus, l'utilisation de \psql nous rajouterais une dose de travail. Comme le projet est conséquent, et limité dans le temps, il n'est pas forcément souhaitable de rajouter une charge de travail pour un gain pas forcément utile. 
+
+Au contraire \mdb est à priori plus adapté. En effet, il sera très simple à configurer, et gère mieux les bases de données de la taille de celle qu'on attend. Si celle si vient à grossir, le système est plus optimisé que \mysql pour les données plus grosses. Nous utiliserons donc \mdb. 
