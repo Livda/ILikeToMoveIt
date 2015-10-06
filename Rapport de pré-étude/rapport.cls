@@ -4,6 +4,7 @@
 \usepackage{ucs}
 \usepackage[pdftex]{graphicx}
 \usepackage{fullpage,array}
+\usepackage{xspace}
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 \newcommand{\hsp}{\hspace{20pt}}
