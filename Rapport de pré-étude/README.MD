@@ -17,4 +17,7 @@ Use the script makekile (`make`)  or press *F1* on texmaker.
 ##Alias
 
 LaTeX supporte les alias. Pour en créer, ajoutez votre alias dans le fichier `alias.tex` de la manière suivante :    
-`\newcommand{\votre_alias}{la commande produite}`
+`\newcommand{\votre_alias}{la commande produite\xspace}`
+
+La commande  \xspace permet d'insérer si besoin un espace après votre alias.
+
