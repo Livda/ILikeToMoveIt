@@ -20,6 +20,8 @@
         -> **_Damien_**
     4. BDD    
         -> **_Thomas_**
+    5. Hébergement
+    	-> **_Etienne_**
 5. Estimation de la planification   
     -> **_Florentin_**
 6. Conclusion   
