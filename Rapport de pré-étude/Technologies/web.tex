@@ -1,18 +1,18 @@
 \section{Côté serveur}
 Le choix technologique central de notre projet est le choix du langage côté serveur. De nombreux choix s'offraient à nous, notamment: Ruby, NodeJs, Java EE, PHP, Perl, etc.
-Pour des questions de rapidité de développement, un prototype fonctionnel nous étant demandé pour fin décembre, nous avons restreint nos choix à deux technologies: Java EE, pour sa prise en main facile et sa maitrise par certains membres de l'équipe et PHP pour sa rapidité d'apprentissage, mais essentiellement car comme vous l'avez vu dans la partie 2, nous possédons un début de prototype développé en PHP sous le framework Symfony2.
+Pour des questions de rapidité de développement, un prototype fonctionnel nous étant demandé pour fin décembre, nous avons restreint nos choix à deux technologies: Java EE, pour sa prise en main facile et sa maitrise par certains membres de l'équipe et PHP pour sa rapidité d'apprentissage, mais essentiellement car comme vous l'avez vu dans la partie 2, nous possédons un prototype de notre application développé en PHP sous le framework Symfony2.
 
-piti tableau:
+
 
 \begin{tabular}{|m{125pt}|m{150pt}|m{150pt}|}
 	\hline
-	\null & \textbf{Java EE} & \textbf{Symfony} \\
+	\null & \textbf{Java EE} & \textbf{Symfony2} \\
 	\hline
-	Rapidité d'apprentissage & Un  seul langage à maîtriser & Un langage et une norme pour simplifier le développement\\
+	Rapidité d'apprentissage & Un  seul langage à maîtriser & Un seul langage et une norme pour simplifier le développement\\
 	\hline
-	Gestion de la base de données & Toutes les classes de lecture et d'écriture sont à développer, et la création des classes pour le pattern DAO (Data Acces Object) & Tout est géré automatiquement par Doctrine, une fonctionnalité de Symfony. Il y a quelques méthodes d'accès à redéfinir, mais le travail est minime\\
+	Gestion de la base de données & Toutes les classes de lecture et d'écriture sont à développer. De même pour les classes pour le pattern DAO (Data Acces Object) & Tout est géré automatiquement par Doctrine, une fonctionnalité de Symfony2. Il y a quelques méthodes d'accès à redéfinir, mais le travail est minime\\
 	\hline
-	Rapidité de développement & Rapide mais nous repartons de zéro & Rapide, et nous possédons de bonnes bases\\
+	Rapidité de développement & Rapide mais nous repartons de zéro & Rapide, et nous possédons un prototype déjà bien avancé\\
 	\hline
 \end{tabular}
 %Java ee 
@@ -32,7 +32,7 @@ piti tableau:
 %
 %Rapidité de développement: +++ Rapide, et nous possédons de bonnes bases
 
-De plus, pour implémenter toutes les fonctionnalités dont l'on a besoin (remplissage de pdf, communication avec le CAS et le LPAD), Symfony possède une grande communauté, ce qui laisse envisager que des outils résolvant ces problématiques ont déjà été développés.
-Le dernier argument qui a tranché est le fait que la norme stricte de Symfony2 permet d'avoir une organisation et une reprise du travail d'autrui plus facilement.
+De plus, pour implémenter toutes les fonctionnalités nécessaire au fonctionnement de l'application (gestion des pdf, communication avec le CAS et le LPAD), Symfony2 possède une grande communauté, ce qui laisse envisager que des outils résolvant ces problématiques ont déjà été développés.
+Le dernier argument qui a tranché est le fait que la norme stricte de Symfony2 permet d'avoir une organisation et une reprise du travail d'autrui plus facilement. Ce qui permettra à notre code d'être maintenu dans le temps.
 
-Nous développeront donc sous PhP avec le frameworks Symfony2.
+Nous développeront donc sous PhP avec le framework Symfony2.
