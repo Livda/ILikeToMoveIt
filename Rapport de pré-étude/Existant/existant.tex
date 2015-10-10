@@ -1,6 +1,6 @@
 \section{L'application déjà développée}
 
-Cette partie se concentre sur le prototype déjà créé. Afin de décider si ce dernier allait être réutilisé ou non, une campagne de test a été effectuée. Les bugs et différences avec nos propres spécifications ont donc été cherchés, afin de déterminer le temps et les modifications à apporter au prototype.
+Cette partie se concentre sur le prototype déjà créé. Afin de décider si ce dernier allait être réutilisé ou non, une campagne de test a été effectuée. Les bugs et différences avec nos propres spécifications ont donc été cherchées, afin de déterminer le temps et les modifications à apporter au prototype.
 
 
 \subsection{Les avantages de l'application}
@@ -13,10 +13,10 @@ Les plus importantes sont :
 \item la gestion des étudiants
 \item la possibilité pour les étudiants d'entrer leurs vœux, et pour les administrateurs de les modifier
 \item les affectations ont été implémentées, avec la possibilité de les entrer manuellement par les administrateurs ou de lancer un algorithme de classement
-\item le tableau de bord, il permet de télécharger des fichiers pdf pour impression par les étudiants.
+\item le tableau de bord, il permet d'uploader des fichiers pdf pour impression par les étudiants.
 \end{itemize}
 
-L'application présente cependant des différences par rapport à notre nouveau cahier des charges. Celle-ci a donc subi des tests afin de déterminer ses limites.
+L'application présente cependant des différences par rapport à notre nouveau cahier des charges. Celles-ci a donc subi des tests afin de déterminer ses limites.
 
 
 \subsection{Campagne de tests effectuée}
@@ -26,12 +26,13 @@ Elle s'est déroulée comme suit :
 
 \begin{enumerate}
 \item Création d'administrateurs.
-\item Ajout d'écoles et des universités. Plusieurs écoles différentes avec des modalités différentes : Europe ou hors Europe, mobilité ou double diplôme, nombres de places différents, partenariat actif ou non.
+\item Ajout d'écoles et Universités. Plusieurs écoles différentes avec des modalités différentes : Europe ou hors Europe, mobilité ou double diplôme, nombres de places différents, partenariat actif ou non.
 \item Ajout d'étudiants et création de leurs vœux du côté de l'interface étudiant. Certains étudiants de la même année avec le même premier vœu. Des étudiants de deux années différentes avec le même premier vœu. Des étudiants sans vœu.
 \item Modifications et ajout de vœux côté administrateur.
 \item Passage à la phase suivante : verrouillage des vœux afin d'empêcher les étudiants de modifier leurs vœux.
 \item Créations d'affectations fixes, puis utilisation de l'algorithme d'affectation automatiques.
-\item Passage à la phase suivante : rendre les affectations publiques, afin que les étudiants y aient accès. 
+\item Passage à la phase suivante : rendre les affectations publiques, afin que les étudiants y aient accès.
+\item 
 \item Passage à l'année suivante.
 \item Ré-exécution des phases, depuis l'ajout d'écoles jusqu'au passage à l'année suivante.
 \end{enumerate}
@@ -84,5 +85,5 @@ Un import des affectations par fichier CSV devrait être envisagé, comme pour l
 
 Lors de la création d'une affectation de façon manuelle, les écoles apparaissent dans un menu déroulant. Cela sera sans doute à modifier, puisque le nombre d'écoles partenaire peut être assez élevé.
 
-RÉPARTITION AUTOMATIQUE #TO DO
+RÉPARTITION AUTOMATIQUE TO DO
 
