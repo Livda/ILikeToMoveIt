@@ -37,7 +37,7 @@ Elle s'est déroulée comme suit :
 \end{enumerate}
 
 
-Durant chaque phases les bugs ou observations ont été scrupuleusement notés, afin de définir les modifications à apporter au prototype.
+Durant chaque phases les bugs, limitations ou observations ont été scrupuleusement notés, afin de définir les modifications à apporter au prototype.
 
 
 \subsection{les limitations de l'application}
@@ -61,12 +61,28 @@ Lors du passage d'une école de l'état "actif" à "inactif", aucun test n'est e
 Plus important, il n'y a pas de limitations sur les semestres disponibles pour une école. Il est donc impossible d'empêcher un étudiant de choisir une école dont aucun jeton n'est présent pour le premier semestre de cinquième année par exemple.
 
 
-\subsubsection{Etudiants :}
+\subsubsection{Étudiants :}
 Aucune gestion des redoublements n'est prévue par l'application.
 
 Pour le tableau présentant les étudiants, aucun affichage n'est fait des étudiants n'ayant pas leur choix, et aucune différenciation n'est faite concernant deux étudiants qui auraient le même nom. Il faudrait sûrement utiliser l'ID étudiant, qui est différents pour tous les élèves.
 
+Les étudiants ne s'authentifient pas, une adresse URL générée au hasard permet de les identifier. Cela pose des problèmes de sécurité, puisque une personne possédant l'URL d'un étudiant peut facilement accéder à son interface. De plus, certains étudiants possèdent des adresses URL semblables, et peuvent donc accéder facilement au tableau de bord d'autre étudiants en modifiant légèrement leur adresse URL. Cela est dû à un bug qui doit être corrigé.
 
-Différence avec nos spécifications
-Manque les commentaires pour les écoles
+Si deux étudiants de la même année sont entré avec le même rang, aucun message d'erreur n'est envoyé.
+
+
+\subsubsection{Vœux:}
+Lorsque les vœux sont verrouillés, aucun message explicite n'est présent sur l'interface des étudiants.
+
+Un léger problème graphique est présent : le bouton "Ajouter" sur l'interface étudiant est situé trop à gauche en dehors de la case du tableau.
+
+Du côté de l'interface administrateur, il faudrait sans doute afficher les rangs (ou moyennes) des étudiants, afin de faciliter la lecture pour les correspondants RI et qu'ils fassent plus aisément les affectations en fonction du rang (ou de la moyenne).
+
+
+\subsubsection{Affectations :}
+Un import des affectations par fichier CSV devrait être envisagé, comme pour l'import d'étudiants et du classement Ceci afin de faciliter la création d'affectation lorsque de nombreux étudiants seront présents sur la base de données.
+
+Lors de la création d'une affectation de façon manuelle, les écoles apparaissent dans un menu déroulant. Cela sera sans doute à modifier, puisque le nombre d'écoles partenaire peut être assez élevé.
+
+RÉPARTITION AUTOMATIQUE #TO DO
 
