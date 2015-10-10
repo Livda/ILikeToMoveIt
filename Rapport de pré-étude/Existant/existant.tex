@@ -1,5 +1,73 @@
+\section{L'application déjà développée}
 
-		\section{L'application en place}
-			\subsection{Ce qui est cool et swag}
-			\subsection{Ce qui chie dans la colle}
-	
+Cette partie se concentre sur le prototype déjà créé. Afin de décider si ce dernier allait être réutilisé ou non, une campagne de test a été effectuée. Les bugs et différences avec nos propres spécifications ont donc été cherchées, afin de déterminer le temps et les modifications à apporter au prototype.
+
+
+\subsection{Les avantages de l'application}
+
+L'avantage premier à utiliser le prototype comme base pour notre application est le gain de temps. En effet, une bonne partie des spécificités sont déjà présentes et prêtes à être utilisées.
+Les plus importantes sont :
+\begin{itemize}
+\item la création des administrateurs
+\item l'ajout des universités et leur modification
+\item la gestion des étudiants
+\item la possibilité pour les étudiants d'entrer leurs vœux, et pour les administrateurs de les modifier
+\item les affectations ont été implémentées, avec la possibilité de les entrer manuellement par les administrateurs ou de lancer un algorithme de classement
+\item le tableau de bord, il permet d'uploader des fichiers pdf pour impression par les étudiants.
+\end{itemize}
+
+L'application présente cependant des différences par rapport à notre nouveau cahier des charges. Celles-ci a donc subi des tests afin de déterminer ses limites.
+
+
+\subsection{Campagne de tests effectuée}
+
+Les tests avaient pour but de découvrir les faiblesses et les limitations de l'application par rapport aux spécificités. Une année complète a donc été simulée, avec ajout des étudiants, choix des vœux, affectations, génération des documents et suivi de la mobilité.
+Elle s'est déroulée comme suit :
+
+\begin{enumerate}
+\item Création d'administrateurs.
+\item Ajout d'écoles et Universités. Plusieurs écoles différentes avec des modalités différentes : Europe ou hors Europe, mobilité ou double diplôme, nombres de places différents, partenariat actif ou non.
+\item Ajout d'étudiants et création de leurs vœux du côté de l'interface étudiant. Certains étudiants de la même année avec le même premier vœu. Des étudiants de deux années différentes avec le même premier vœu. Des étudiants sans vœu.
+\item Modifications et ajout de vœux côté administrateur.
+\item Passage à la phase suivante : verrouillage des vœux afin d'empêcher les étudiants de modifier leurs vœux.
+\item Créations d'affectations fixes, puis utilisation de l'algorithme d'affectation automatiques.
+\item Passage à la phase suivante : rendre les affectations publiques, afin que les étudiants y aient accès.
+\item 
+\item Passage à l'année suivante.
+\item Ré-exécution des phases, depuis l'ajout d'écoles jusqu'au passage à l'année suivante.
+\end{enumerate}
+
+
+Durant chaque phases les bugs ou observations ont été scrupuleusement notés, afin de définir les modifications à apporter au prototype.
+
+
+\subsection{les limitations de l'application}
+
+Les résultats obtenus sont les suivants triés par fonctionnalité.
+
+\subsubsection{Général :}
+Certains menus déroulants sont peu ergonomiques : il est possible de choisir des nombres négatifs pour les places disponibles en université, les rangs des étudiants, leur promotion et l'année en cours.
+
+Il manque également de nombreuses statistiques sur le tableau de bord.
+
+\subsubsection{Départements :}
+Les départements n'ont tout simplement pas été implémentés lors du développement du prototype. Il n'y a donc pas de distinction de département ni pour les étudiants, ni pour les place disponibles par département dans les différentes universités.
+
+
+\subsubsection{Universités :}
+Il n'est pas possible d'ajouter des commentaires pour une école.
+
+Lors du passage d'une école de l'état "actif" à "inactif", aucun test n'est effectué sur les vœux pour vérifier qu'aucun étudiant n'a choisi cette école.
+
+Plus important, il n'y a pas de limitations sur les semestres disponibles pour une école. Il est donc impossible d'empêcher un étudiant de choisir une école dont aucun jeton n'est présent pour le premier semestre de cinquième année par exemple.
+
+
+\subsubsection{Etudiants :}
+Aucune gestion des redoublements n'est prévue par l'application.
+
+Pour le tableau présentant les étudiants, aucun affichage n'est fait des étudiants n'ayant pas leur choix, et aucune différenciation n'est faite concernant deux étudiants qui auraient le même nom. Il faudrait sûrement utiliser l'ID étudiant, qui est différents pour tous les élèves.
+
+
+Différence avec nos spécifications
+Manque les commentaires pour les écoles
+
