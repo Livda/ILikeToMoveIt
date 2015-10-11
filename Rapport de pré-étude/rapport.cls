@@ -5,13 +5,20 @@
 \usepackage[pdftex]{graphicx}
 \usepackage{fullpage,array}
 \usepackage{xspace}
+\usepackage{hyperref}
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 \newcommand{\hsp}{\hspace{20pt}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
-
-
+%redefinition of the color of the links
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
 
 %redefinition de la présentation des parties (inspiré de amsbook.cls)
 
