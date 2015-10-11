@@ -1,3 +1,67 @@
 
-		\section{La méthode des dinosaures}
+		\section{Les méthode actuellement en place}
 	
+
+La gestion de la mobilité sortante n'utilise pas de logiciel dédié actuellement. Pour combler ce manque, les correspondants RI combinent l'utilisation de plusieurs outils et techniques différents, ce qui est parfois compliqué, et engendre bien souvent des pertes de temps. Nous présenterons ainsi ce système, puis nous étudieront  les solutions alternatives qui pourraient être utilisées pour faciliter la tache des correspondants RI. 
+
+\subsection{La méthode actuelle}
+
+Le comportement de l'application souhaité, décrit en section \ref{sec::gestion_mobilite} est grandement inspirée des démarches actuelles. Ainsi, les trois grandes étapes décrites plus haut sont également présentes. Notons que la démarche décrite est celle utilisée au département informatique.  
+ \subsection{Le choix des destinations de départ et leur affectation}
+		 
+		Pour ce faire, les \ris créent un formulaire en ligne demandant les différents vœux, puis l'envoient par mail aux étudiants. 
+		
+		Une fois reçu, le remplis. À la date limite, le \ri ferme le sondage, et récupère un fichier excel qui récapitule les différentes requêtes. 
+		
+		Christian Raymond a créé un script \textit{perl} qui lui permet alors de classer les étudiants grâce au fichier récupéré.
+		
+		Par la suite, les résultats sont renvoyés par mail précisant les affectations. 
+		
+		\medbreak
+		
+		Les principales limites de cette partie sont les suivantes : 
+		\begin{itemize}
+		\item Le choix par formulaire en ligne est relativement peu sécurisé, et peu ergonomique. Un étudiant peut  éventuellement s'inscrire plusieurs fois. De plus, les doubles diplômes sont mal gérés. Ainsi, l'étudiant est libre de choisir soit un double diplôme, soit une mobilité sur un semestre. Avec ce système, il est possible de s'inscrire aux deux. 
+		\item Le partie affectation est pénible pour les \ris. En effet, il faut faire un certain nombre de manipulations pour obtenir le résultat  souhaité. De plus, ce système n'est pas flexible. Si le format de retour du formulaire est modifiée, il faut donc adapter le script. 
+		\item Certaines étapes sont redondantes chaque années. Le formulaire créé est toujours le même. Cependant il faut ré-effectuer l'opération chaque année. 
+		\end{itemize}
+		\subsection{La génération des documents}
+		
+%		\subsubsection{Côté étudiant}
+%		
+%		Une fois leur vœux de mobilité fixé, les étudiants vont avoir accès à tous les documents nécessaires, notamment le "Learning Agreement", via un système de téléchargement. La génération automatique des documents PDF remplis à partir des choix faits par l'étudiant est à envisager. De plus, en fonction de leur destination, l'application dirigera les étudiants sur les sites des université/école appropriées pour les guider dans la recherche et la complétion de ces documents.
+%		
+%		Une fois ils pourront déposer ces documents sur une plateforme afin d'être validé par les correspondants RI.
+%	
+%		\subsubsection{Côté RI}
+%		
+%		Les correspondants RI doivent pouvoir récupérer les documents remis par les élèves. Afin de les valider, une signature électronique devra pouvoir être déposée sur les différents documents. 
+%		
+%		
+		\subsection{Le suivi de la mobilité}
+%		
+%		\subsubsection{Côté étudiant}
+%		
+%		Au cours de sa mobilité, un étudiant pourra changer son contrat d'étude pour le refaire valider par son correspondant RI, le tout électroniquement.
+%		
+%		Une fois sa mobilité finie, il pourra déposer ses notes afin que les jury de puissent les prendre en compte même si les justificatifs ne sont pas encore arrivé en France. De plus, il pourra mettre un commentaire sur sa destination afin de guider les étudiants suivants.
+%		
+%		\subsubsection{Côté RI}
+%		
+%		Le service RI pourra apposer sa signature électronique sur tous les documents envoyés par les élèves.
+%		
+%		La génération des fiches de jury se fera automatiquement à leur demande.
+%		
+%		\section{La gestion des mobilités entrantes}
+%		
+%		Afin de facilité la gestion des étudiants en mobilité à l'INSA, il nous été demandé de developper une seconde partie à notre application. Cette partie permettrait aux encandrants de savoir quel étudiant est présent, et d'avoir son contrat d'étude de manière simple.
+%		
+%		\subsection{Coté étudiant}
+%		L'étudiant pourrait poster son contrat d'étude une fois validé par l'INSA. Il pourrait le télécharger si des modifications sont à effectuer.
+%		
+%		\subsection{Coté RI}
+%		Les correspondants RI auront accès à une liste complète de tous les étudiants étrangers présents à l'INSA ainsi qu'une trace de ceux déjà venus. Des outils statistiques pourront ainsi être ajoutés afin de simplifier l'exploitation des données. 
+%		
+%		La possibilité de signer électroniquement le contrat d'étude de l'élève sera aussi présente dans cette partie.
+%		
+%		De plus, toute la partie gestion de l'étudiant, c'est à dire son status, la durée de ses études à l'INSA, etc, sera gérée manuellement par les correspondants RI.
