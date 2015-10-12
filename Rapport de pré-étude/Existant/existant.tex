@@ -32,7 +32,8 @@ Elle s'est déroulée comme suit :
 \item Passage à la phase suivante : verrouillage des vœux afin d'empêcher les étudiants de modifier leurs vœux.
 \item Créations d'affectations fixes, puis utilisation de l'algorithme d'affectation automatiques.
 \item Passage à la phase suivante : rendre les affectations publiques, afin que les étudiants y aient accès.
-\item   TO DO
+\item Vérifications des changements côté étudiant.
+\item Changement des statuts des étudiants au niveau de l'interface administrateur.
 \item Passage à l'année suivante.
 \item Ré-exécution des phases, depuis l'ajout d'écoles jusqu'au passage à l'année suivante.
 \end{enumerate}
@@ -85,5 +86,34 @@ Un import des affectations par fichier CSV devrait être envisagé, comme pour l
 
 Lors de la création d'une affectation de façon manuelle, les écoles apparaissent dans un menu déroulant. Cela sera sans doute à modifier, puisque le nombre d'écoles partenaire peut être assez élevé.
 
-RÉPARTITION AUTOMATIQUE TO DO
+Comme décidé lors des entretiens avec nos tuteurs, l'algorithme de tri pourra être modifié, ou choisi par le correspondant RI.
+
+
+\subsubsection{Après validation des affectations :}
+Cette partie n'ayant pas été complètement implémentée, de nombreuses fonctionnalités ne sont pas présentes. De plus certaines n'étaient pas explicitées dans le cahier des charges du prototype. Une partie est présentée ci-après :
+\begin{itemize}
+\item La récupération des contrats d'étude signés pour les étudiants.
+\item La possibilité d'entrer les notes après la mobilité.
+\item La possibilité de modifier le contrat d'étude.
+\item Un statut pour exprimer la fin de la mobilité.
+\item L'envoi de document par les étudiants
+\item La génération de fiche de jury
+\item La présence de commentaires écrits par les étudiants à la fin de leur mobilité afin d'aider et d'informer les étudiants qui souhaiterait la même destination.
+\end{itemize}
+
+
+\subsubsection{Passage à l'année suivante :}
+Sur le tableau de bord, il est possible pour l'administrateur de passer l'application à l'année suivante. Les \voe, affectations et étudiants sont gardés dans un historique de l'année précédente. De plus, une nouvelle année est apparue pour l'ajout de ces mêmes éléments.
+
+Cependant cette configuration oblige les \ris à ajouter de nouveau tout les étudiants au début de la nouvelle année.
+
+
+\subsubsection{Conclusion}
+On peut donc dire que le prototype offre tout de même de nombreuses fonctionnalités nécessaires au projet. Les mécaniques des deux premières phases sont présentes, ou au moins en partie. 
+
+Cependant, de nombreuses modifications de fond et de formes vont devoir été effectuées, en plus de la fin de l'implémentation de la phase trois de façon complète.
+
+Au niveau de la forme, il s'agira d'améliorer certains affichages (listes déroulantes) ou de la présence de la moyenne des étudiants en plus du rang par exemple. Pour le fond, l'ajout des départements va s'avérer nécessaire, en plus de limitations pour les semestres disponibles à l'étranger.
+
+Le prototype va donc fortement influencer nos choix pour les technologies utilisées.
 
