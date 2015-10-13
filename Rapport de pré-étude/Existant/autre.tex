@@ -6,39 +6,40 @@ La gestion de la mobilité sortante n'utilise pas de logiciel dédié actuelleme
 
 \subsection{La méthode actuelle}
 
-Le comportement de l'application souhaité, décrit en section \ref{sec::gestion_mobilite} est grandement inspirée des démarches actuelles. Ainsi, les trois grandes étapes décrites plus haut sont également présentes. Notons que la démarche décrite est celle utilisée au département informatique.  
+Le comportement de l'application souhaité, décrit en section \ref{sec::gestion_mobilite} est grandement inspirée des démarches actuelles. Ainsi, les trois grandes étapes décrites plus haut sont également présentes. Notons que la fonctionnement  décrit est celle utilisée au département informatique.  
  \subsection{Le choix des destinations de départ et leur affectation}
 		 
 		Pour ce faire, les \ris créent un formulaire en ligne demandant les différents vœux, puis l'envoient par mail aux étudiants. 
 		
-		Une fois reçu, le remplis. À la date limite, le \ri ferme le sondage, et récupère un fichier excel qui récapitule les différentes requêtes. 
+		Une fois reçu, les étudiants le remplissent. À la date limite, le \ri ferme le sondage, et récupère un fichier excel qui récapitule les différentes requêtes. 
 		
 		Christian Raymond a créé un script \textit{perl} qui lui permet alors de classer les étudiants grâce au fichier récupéré.
 		
-		Par la suite, les résultats sont renvoyés par mail précisant les affectations. 
+		Par la suite, les résultats  précisant les affectations sont envoyés par mail. 
 		
 		\medbreak
 		
 		Les principales limites de cette partie sont les suivantes : 
 		\begin{itemize}
 		\item Le choix par formulaire en ligne est relativement peu sécurisé, et peu ergonomique. Un étudiant peut  éventuellement s'inscrire plusieurs fois. De plus, les doubles diplômes sont mal gérés. Ainsi, l'étudiant est libre de choisir soit un double diplôme, soit une mobilité sur un semestre. Avec ce système, il est possible de s'inscrire aux deux. 
-		\item Le partie affectation est pénible pour les \ris. En effet, il faut faire un certain nombre de manipulations pour obtenir le résultat  souhaité. De plus, ce système n'est pas flexible. Si le format de retour du formulaire est modifiée, il faut donc adapter le script. 
-		\item Certaines étapes sont redondantes chaque années. Le formulaire créé est toujours le même. Cependant il faut ré-effectuer l'opération chaque année. 
+		\item La partie affectation est fastidieuse  pour les \ris. En effet, il faut faire un nombre important de manipulations pour obtenir le résultat  souhaité. De plus, ce système n'est pas flexible. Si le format de retour du formulaire est modifié, il faut adapter le script. 
+		\item Certaines étapes sont redondantes chaque années. Le formulaire créé est toujours le même. Cependant il faut ré-effectuer l'opération chaque année. Il s'agit d'une perte de temps. 
 		\end{itemize}
-		\subsection{La génération des documents}
-		
-%		\subsubsection{Côté étudiant}
-%		
-%		Une fois leur vœux de mobilité fixé, les étudiants vont avoir accès à tous les documents nécessaires, notamment le "Learning Agreement", via un système de téléchargement. La génération automatique des documents PDF remplis à partir des choix faits par l'étudiant est à envisager. De plus, en fonction de leur destination, l'application dirigera les étudiants sur les sites des université/école appropriées pour les guider dans la recherche et la complétion de ces documents.
-%		
-%		Une fois ils pourront déposer ces documents sur une plateforme afin d'être validé par les correspondants RI.
-%	
-%		\subsubsection{Côté RI}
-%		
-%		Les correspondants RI doivent pouvoir récupérer les documents remis par les élèves. Afin de les valider, une signature électronique devra pouvoir être déposée sur les différents documents. 
-%		
-%		
-		\subsection{Le suivi de la mobilité}
+
+		\subsection{La gestion  des documents}
+		La gestion des documents administratif est entièrement fait à la main. Les étudiants téléchargent les documents sur la plateforme moodle, ou sont envoyés par mail pour les cas particuliers. 
+                
+                Par la suite, les étudiants rencontre le \ri pour faire signer les documents. Une date buttoire est fixée par le SRI pour le rendu de ce document, afin de pouvoir répartir les bourses en temps et en heure. 
+
+\medbreak
+
+Côté étudiant, remplir le \textit{Learning Agreement} demande à remplir un certains nombre de champs qui sont déjà connus par l'administration. On peut citer le nom de l'étudiant, sa filière, mais aussi quelques informations concernant l'INSA, qui peuvent être compliqué à trouver. 
+
+\medbreak
+
+L'idée dans cette partie est donc de simplifier au maximum la tache pour les étudiants. Tout d'abord en recensant les documents à produire sur l'application, ensuite en offrant une interface qui permettra de remplir certains documents plus facilement. 
+
+\subsection{Le suivi de la mobilité}
 %		
 %		\subsubsection{Côté étudiant}
 %		
