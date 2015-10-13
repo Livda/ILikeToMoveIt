@@ -2,15 +2,15 @@
 		\section{La gestion des mobilités sortantes}
 		\label{sec::gestion_mobilite}
 		
-		Ce projet doit aboutir sur une application web permettant aux étudiants d'entrer leurs vœux de mobilités, de leur affecter automatiquement une destination et de faciliter le transfert de documents entre le service RI (Relations Internationales) de chaque département de l'INSA. Tout ceci doit se passer en trois temps.
+		Ce projet doit aboutir sur une application web permettant aux étudiants d'entrer leurs vœux de mobilités, de leur affecter automatiquement une destination et de faciliter le transfert de documents entre les services RI de chaque département de l'INSA. Tout ceci doit se passer en trois temps.
 		
 		 \subsection{Le choix des destinations de départ et leur affectation}
 		 
 		 \subsubsection{Côté étudiant}
 		 
-		 L'étudiant doit pouvoir choisir une ou plusieurs des destinations parmi toutes celles possibles. Lors de son choix, il pourra consulter des commentaires laissés par le RI ou par d'anciens élèves. De plus, toutes ces destinations devront être classées par ordre de préférence de l'étudiant.
+		 L'étudiant doit pouvoir choisir une ou plusieurs des destinations parmi toutes celles disponibles. Lors de son choix, il pourra consulter des commentaires laissés par le correspondant RI ou par d'anciens élèves. De plus, toutes ces destinations devront être classées par ordre de préférence de l'étudiant.
 		 
-		 Ce choix doit pouvoir être modifié, tant niveau du classement que des destinations, jusqu'au dernier moment.
+		 Ce choix doit pouvoir être modifié, aussi bien au niveau du classement que des destinations, jusqu'au dernier moment.
 		 
 		\subsubsection{Côté RI}
 		
@@ -18,14 +18,17 @@
 		
 		Ils doivent aussi pouvoir mettre à jour la liste des choix en fonction de l'évolution des partenariats entre les différentes écoles. Pour chacune des destinations proposées, ils peuvent mettre un commentaire permettant aux étudiants d'orienter leurs choix par la suite.
 		
-		Une fois que les étudiants ont fais leurs vœux, les correspondants RI peuvent modifier manuellement et sortir certains étudiants du classement automatique, et ce jusqu'à la fin de la première étape. Ils peuvent aussi lancer ou relancer le classement automatique des étudiants à n'importe quel moment. Une fois ce classement effectué, ils doivent pouvoir voir les étudiants et leurs destinations, mais aussi ceux qui n'ont pas eu de choix de destination.
+		Une fois que les étudiants ont fais leurs vœux, les correspondants RI peuvent modifier manuellement et enlever certains étudiants du classement automatique, et ce jusqu'à la fin de la première étape. Ils peuvent aussi lancer ou relancer le classement automatique des étudiants à n'importe quel moment. Une fois ce classement effectué, ils doivent pouvoir voir les étudiants et leurs destinations, mais aussi ceux qui n'ont pas eu de choix de destination.
+		
+		Le classement automatique se fera à l'aide d'un algorithme qui doit être défini en collaboration avec l'ensemble des correspondants RI.		
+		
 		\subsection{La génération des documents}
 		
 		\subsubsection{Côté étudiant}
 		
-		Une fois leur vœux de mobilité fixé, les étudiants vont avoir accès à tous les documents nécessaires, notamment le "Learning Agreement", via un système de téléchargement. La génération automatique des documents PDF remplis à partir des choix faits par l'étudiant est à envisager. De plus, en fonction de leur destination, l'application dirigera les étudiants sur les sites des université/école appropriées pour les guider dans la recherche et la complétion de ces documents.
+		Une fois leurs vœux de mobilité fixé, les étudiants vont avoir accès à tous les documents nécessaires, notamment le "Learning Agreement", via un système de téléchargement. La génération automatique des documents PDF remplis à partir des choix faits par l'étudiant est à envisager. De plus, en fonction de leur destination, l'application dirigera les étudiants sur les sites des université/école appropriées pour les guider dans la recherche et la complétion de ces documents.
 		
-		Une fois ils pourront déposer ces documents sur une plateforme afin d'être validé par les correspondants RI.
+		Ils pourront ensuite déposer ces documents sur une plateforme afin d'être validés par les correspondants RI.
 	
 		\subsubsection{Côté RI}
 		
@@ -38,7 +41,7 @@
 		
 		Au cours de sa mobilité, un étudiant pourra changer son contrat d'étude pour le refaire valider par son correspondant RI, le tout électroniquement.
 		
-		Une fois sa mobilité finie, il pourra déposer ses notes afin que les jury de puissent les prendre en compte même si les justificatifs ne sont pas encore arrivé en France. De plus, il pourra mettre un commentaire sur sa destination afin de guider les étudiants suivants.
+		Une fois sa mobilité finie, il pourra déposer ses notes afin que les jury de fin d'année puissent les prendre en compte même si les justificatifs ne sont pas encore arrivés en France. De plus, il pourra mettre un commentaire sur sa destination afin de guider les étudiants suivants.
 		
 		\subsubsection{Côté RI}
 		
@@ -48,7 +51,7 @@
 		
 		\section{La gestion des mobilités entrantes}
 		
-		Afin de facilité la gestion des étudiants en mobilité à l'INSA, il nous été demandé de developper une seconde partie à notre application. Cette partie permettrait aux encandrants de savoir quel étudiant est présent, et d'avoir son contrat d'étude de manière simple.
+		Afin de faciliter la gestion des étudiants en mobilité à l'INSA, il nous été demandé de développer une seconde partie à notre application. Cette partie permettrait aux encadrants d'avoir la liste des étudiant en mobilité entrante. Les contrats d'étude doivent également être accessibles de manière simple.
 		
 		\subsection{Coté étudiant}
 		L'étudiant pourrait poster son contrat d'étude une fois validé par l'INSA. Il pourrait le télécharger si des modifications sont à effectuer.
