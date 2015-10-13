@@ -2,7 +2,7 @@
 		\section{Les méthode actuellement en place}
 	
 
-La gestion de la mobilité sortante n'utilise pas de logiciel dédié actuellement. Pour combler ce manque, les correspondants RI combinent l'utilisation de plusieurs outils et techniques différents, ce qui est parfois compliqué, et engendre bien souvent des pertes de temps. Nous présenterons ainsi ce système, puis nous étudieront  les solutions alternatives qui pourraient être utilisées pour faciliter la tache des correspondants RI. 
+La gestion de la mobilité sortante n'utilise pas de logiciel dédié actuellement. Pour combler ce manque, les correspondants RI combinent l'utilisation de plusieurs outils et techniques différents, ce qui est parfois compliqué, et engendre bien souvent des pertes de temps. Nous présenterons ainsi ce système.
 
 \subsection{La méthode actuelle}
 
@@ -21,7 +21,7 @@ Le comportement de l'application souhaité, décrit en section \ref{sec::gestion
 		
 		Les principales limites de cette partie sont les suivantes : 
 		\begin{itemize}
-		\item Le choix par formulaire en ligne est relativement peu sécurisé, et peu ergonomique. Un étudiant peut  éventuellement s'inscrire plusieurs fois. De plus, les doubles diplômes sont mal gérés. Ainsi, l'étudiant est libre de choisir soit un double diplôme, soit une mobilité sur un semestre. Avec ce système, il est possible de s'inscrire aux deux. 
+		\item Le choix par formulaire en ligne est relativement peu sécurisé, et peu ergonomique. Un étudiant peut  éventuellement s'inscrire plusieurs fois. Nous pouvons également citer la difficulté de gestion du choix entre mobilité classique et double diplôme. Un étudiant doit pouvoir choisir : soit il effectue une mobilité d'un semestre, soit un double diplôme. Dans le cas des formulaires, l'étudiant à la possibilité de sélectionner les deux. 
 		\item La partie affectation est fastidieuse  pour les \ris. En effet, il faut faire un nombre important de manipulations pour obtenir le résultat  souhaité. De plus, ce système n'est pas flexible. Si le format de retour du formulaire est modifié, il faut adapter le script. 
 		\item Certaines étapes sont redondantes chaque années. Le formulaire créé est toujours le même. Cependant il faut ré-effectuer l'opération chaque année. Il s'agit d'une perte de temps. 
 		\end{itemize}
@@ -40,29 +40,17 @@ Côté étudiant, remplir le \textit{Learning Agreement} demande à remplir un c
 L'idée dans cette partie est donc de simplifier au maximum la tache pour les étudiants. Tout d'abord en recensant les documents à produire sur l'application, ensuite en offrant une interface qui permettra de remplir certains documents plus facilement. 
 
 \subsection{Le suivi de la mobilité}
-%		
-%		\subsubsection{Côté étudiant}
-%		
-%		Au cours de sa mobilité, un étudiant pourra changer son contrat d'étude pour le refaire valider par son correspondant RI, le tout électroniquement.
-%		
-%		Une fois sa mobilité finie, il pourra déposer ses notes afin que les jury de puissent les prendre en compte même si les justificatifs ne sont pas encore arrivé en France. De plus, il pourra mettre un commentaire sur sa destination afin de guider les étudiants suivants.
-%		
-%		\subsubsection{Côté RI}
-%		
-%		Le service RI pourra apposer sa signature électronique sur tous les documents envoyés par les élèves.
-%		
-%		La génération des fiches de jury se fera automatiquement à leur demande.
-%		
-%		\section{La gestion des mobilités entrantes}
-%		
-%		Afin de facilité la gestion des étudiants en mobilité à l'INSA, il nous été demandé de developper une seconde partie à notre application. Cette partie permettrait aux encandrants de savoir quel étudiant est présent, et d'avoir son contrat d'étude de manière simple.
-%		
-%		\subsection{Coté étudiant}
-%		L'étudiant pourrait poster son contrat d'étude une fois validé par l'INSA. Il pourrait le télécharger si des modifications sont à effectuer.
-%		
-%		\subsection{Coté RI}
-%		Les correspondants RI auront accès à une liste complète de tous les étudiants étrangers présents à l'INSA ainsi qu'une trace de ceux déjà venus. Des outils statistiques pourront ainsi être ajoutés afin de simplifier l'exploitation des données. 
-%		
-%		La possibilité de signer électroniquement le contrat d'étude de l'élève sera aussi présente dans cette partie.
-%		
-%		De plus, toute la partie gestion de l'étudiant, c'est à dire son status, la durée de ses études à l'INSA, etc, sera gérée manuellement par les correspondants RI.
+
+Dans la majorité des cas, le contrat d'étude est modifié une fois arrivé sur place. Le premier contrat, rendu bien plus tôt, est invalide. Il faut donc procéder à une nouvelle signature du contrat. 
+
+Le contrat est donc rédigé dans l'université d'accueil, signé par les autorité de cette établissement. Alors, l'étudiant scanne  le document puis l'envoie par mail au \ri. 
+
+Celui ci l'imprime alors, le signe, le scanne puis le renvoie à l'étudiant. Le contrat est alors de nouveau imprimé, et remis à l'université d'accueil. 
+
+\medbreak
+
+Les limites de ce fonctionnement sont évidentes : non seulement le processus est fastidieux, mais en plus très peu écologique. L'idée décrite plus haut serait donc de ne pas avoir besoin d'imprimer le document pour le \ri, évitant ainsi une perte de temps et réduisant le gaspillage de papier. 
+
+\bigbreak 
+
+Voici donc les le fonctionnement actuel de la gestion des mobilités. 
