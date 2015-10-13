@@ -7,9 +7,7 @@
 \usepackage{xspace}
 \usepackage{hyperref}
 \setlength{\parindent}{0cm}
-\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
-\newcommand{\hsp}{\hspace{20pt}}
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+%\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 
 
 \setlength{\parindent}{0.5cm}
