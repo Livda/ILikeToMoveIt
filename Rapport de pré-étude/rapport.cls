@@ -11,6 +11,9 @@
 \newcommand{\hsp}{\hspace{20pt}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
+
+\setlength{\parindent}{0.5cm}
+
 %redefinition of the color of the links
 \hypersetup{
     colorlinks,
