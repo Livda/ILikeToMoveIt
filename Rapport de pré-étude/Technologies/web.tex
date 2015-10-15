@@ -15,9 +15,10 @@ Ce langage étant maîtriser déjà par toute l'équipe, l'apprentissage devrais
 \textit{Symfony2}nécessite la connaissance du PHP et de toute une norme assez lourde. 
 Le PHP et la norme n'étant pas connu par toute l'équipe le temps de formation sera plus long qu'avec \textit{Java EE}.
 
-\subsubsection{Gestion de la base de donnée}
+\subsubsection{Facilité de gestion de la BDD}
 \paragraph{Java EE}
 Nous devrons développer toutes les classes d'écriture et de lecture dans la base de donnée. De plus nous devrons crée tout les objets Java destinée à recevoir les données lues dans la base pour suivre le partern DAO et pouvoir se servir des pages dynamiques de \textit{Java EE}.
+Nous pourrions éviter cela en passant par un framework, mais nous perdrions alors l'avantage de la rapidité d'apprentissage de \jee vis à vis de \symfony
 
 \paragraph{Symfony2}
 \textit{Symfony2}possède un outils appelé Doctrine qui génère automatiquement la base de donnée, les méthodes d'accès et les variables pour permette le traitement dans la page dynamique. Très peu de seront donc développé, notamment les plus poussées.
@@ -30,7 +31,7 @@ Le développement en \textit{Java EE}est relativement rapide, mais nous devons a
 Avec \textit{Symfony2}nous partons d'un prototype déjà bien avancé et une fois la norme apprise le développement est tout aussi performant que sur \textit{Java EE}.
 
 
-\begin{tabular}{|m{125pt}|m{150pt}|m{150pt}|}
+\begin{tabular}{|m{125pt}|m{50pt}|m{50pt}|}
 	\hline
 	\null & \textbf{Java EE} & \textbf{Symfony2} \\
 	\hline
@@ -51,20 +52,43 @@ Nous avons donc décidé de développer sous PHP avec le framework \textit{Symfo
 
 \subsection{Technologie serveur}
 
-Nginx VS Apache incoming
+Après avoir choisi le langage serveur il nous faut choisir le serveur en question. Deux principales options s'offre à nous: Apache ou Nginx.
+
+\subsubsection{Affichage des pages}
+Pour l'affichage des pages statiques Apache doit passer par un module externe, ce qui le rend plus lent que Nginx sur ce point.
+Mais ceci est contrebalancer par le fait que Nginx ne gère pas les pages dynamiques nativement, ce qui le rend dépendant d'un module externe sur ce point.
+Notre site étant composé essentiellement de page dynamiques Apache est plus intéressant sur ce point
+
+\subsubsection{Place mémoire}
+Nginx a l'avantage d'occuper moins de mémoire que Apache et de consommer moins de RAM.
+Ce point aurai pu être important si notre espace de stockage étais très limiter, mais celui fournis par le CRI nous permet de supporter aussi bien Apache que Nginx.
+
+\subsubsection{Configuration et documentation}
+Apache étant plus vieux que Nginx possède une documentation plus fournis que celle de ce derniers.
+La configuration de Apache est plus laborieuse que celle de Nginx par son découpage en nombreux fichiers. Contrairement à Nginx où toute la configuration se fait à un seul endroit.
+Cela permet à Nginx d'être plus rapide et en théorie plus simple à implémenter, mais cela le rend moins flexible.
+
+\subsubsection{Ajout de Modules}
+Si nous voulons ajouter des fonctionnalité à Apache, l'ont peut après coup rajouter des modules à celui-ci. Mais pour Nginx il faut les compiler dans le noyau du logiciel nous même dés l'installation.
+
+
+\begin{tabular}{|m{125pt}|m{50pt}|m{50pt}|}
+	\hline
+	\null & \textbf{Apache} & \textbf{Nginx} \\
+	\hline
+	Affichage des pages & ++ & -\\
+	\hline
+	Place mémoire & +- & ++\\
+	\hline
+	Configuration et documentation & + & - \\
+	\hline
+	Ajout de Modules & + & -- \\
+	\hline
+\end{tabular} \vspace*{5mm}
 
 
 
-Nginx:
--moins de ram
--mieux pour page statics
--moins de doc
--pour implémenter un module ont doit \og recrée \fg{} le serveur depuis le noyau
+En dernier point, le prototype que nous possédons a été configuré pour Apache.
 
-apache
--très documenté
--mieux en dynamique
--plus de doc
--facile à implenté et à rajouter des modules dessus
--prototype programmer pour apache
+Avec tout ces points, nous décidons d'installer *Nginx//Apache* pour :
 
