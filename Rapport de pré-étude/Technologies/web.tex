@@ -9,29 +9,29 @@ Pour des questions de rapidité de développement, un prototype fonctionnel nous
 \subsubsection{Rapidité d'apprentissage}
 \paragraph{Java EE}
 L'avantage de \textit{Java EE} c'est qu'il ne faut connaître que le langage Java et apprendre à se servir de quelques bibliothèques dédiées au langage serveur.
-Ce langage étant maîtriser déjà par toute l'équipe, l'apprentissage devrais être très rapide et donc le développement vite commencé.
+Ce langage étant maîtrisé déjà par toute l'équipe, l'apprentissage devrait être très rapide et donc le développement vite commencé.
 
 \paragraph{Symfony2}
-\textit{Symfony2}nécessite la connaissance du PHP et de toute une norme assez lourde. 
-Le PHP et la norme n'étant pas connu par toute l'équipe le temps de formation sera plus long qu'avec \textit{Java EE}.
+\textit{Symfony2} nécessite la connaissance du PHP et de toute une norme assez lourde. 
+Le PHP et la norme n'étant pas connus par toute l'équipe le temps de formation sera plus long qu'avec \textit{Java EE}.
 
-\subsubsection{Facilité de gestion de la BDD}
+\subsubsection{Facilité de gestion de la Base de données}
 \paragraph{Java EE}
-Nous devrons développer toutes les classes d'écriture et de lecture dans la base de donnée. De plus nous devrons crée tout les objets Java destinée à recevoir les données lues dans la base pour suivre le partern DAO et pouvoir se servir des pages dynamiques de \textit{Java EE}.
+Nous devrons développer toutes les classes d'écriture et de lecture dans la base de données. De plus nous devrons créer tout les objets Java destinés à recevoir les données lues dans la base pour suivre le pattern DAO et pouvoir se servir des pages dynamiques de \textit{Java EE}.
 Nous pourrions éviter cela en passant par un framework, mais nous perdrions alors l'avantage de la rapidité d'apprentissage de \jee vis à vis de \symfony
 
 \paragraph{Symfony2}
-\textit{Symfony2}possède un outils appelé Doctrine qui génère automatiquement la base de donnée, les méthodes d'accès et les variables pour permette le traitement dans la page dynamique. Très peu de seront donc développé, notamment les plus poussées.
+\textit{Symfony2} possède un outils appelé Doctrine qui génère automatiquement la base de données, les méthodes d'accès et les variables pour permette le traitement dans la page dynamique. Très peu de seront donc développé, notamment les plus poussées.
 
 \subsubsection{Rapidité de développement}
 \paragraph{Java EE}
-Le développement en \textit{Java EE}est relativement rapide, mais nous devons abandonner le prototype et passer plus de temps dans la création de la base de donnée.
+Le développement en \textit{Java EE} est relativement rapide, mais nous devons abandonner le prototype et passer plus de temps dans la création de la base de données.
 
 \paragraph{Symfony2}
-Avec \textit{Symfony2}nous partons d'un prototype déjà bien avancé et une fois la norme apprise le développement est tout aussi performant que sur \textit{Java EE}.
+Avec \textit{Symfony2} nous partons d'un prototype déjà bien avancé et une fois la norme apprise, le développement est tout aussi performant que sur \textit{Java EE}.
 
-
-\begin{tabular}{|m{125pt}|m{50pt}|m{50pt}|}
+\begin{center}
+\begin{tabular}{|m{180pt}|m{50pt}|m{50pt}|}
 	\hline
 	\null & \textbf{Java EE} & \textbf{Symfony2} \\
 	\hline
@@ -42,34 +42,35 @@ Avec \textit{Symfony2}nous partons d'un prototype déjà bien avancé et une foi
 	Rapidité de développement & +- & ++ \\
 	\hline
 \end{tabular} \vspace*{5mm}
+\end{center}
 
-Nous pouvons donc conclure que malgré un temps d'apprentissage plus long, une fois celui-ci acquis, l'outils Doctrine, sa norme et prototype nous permettront d'aller plus vite que de tout reprendre à zéro avec \textit{Java EE}.
+Nous pouvons donc conclure que malgré un temps d'apprentissage plus long, une fois celui-ci acquis, l'outil Doctrine, sa norme et le prototype nous permettront d'être plus rapides que de tout reprendre à zéro avec \textit{Java EE}.
 
 Pour implémenter toutes les fonctionnalités nécessaire au fonctionnement de l'application (gestion des pdf, communication avec le CAS et le LDAP), \textit{Symfony2} possède une grande communauté, ce qui laisse envisager que des outils résolvant ces problématiques ont déjà été développés.
-De plus, le fait que la norme stricte de \textit{Symfony2} permet d'avoir une organisation et une reprise du travail d'autrui plus facilement. Ce qui permettra à notre code d'être maintenu dans le temps.\\
+De plus, la norme stricte de \textit{Symfony2} permet d'avoir une organisation et une reprise du travail d'autrui plus facilement. Ce qui permettra à notre code d'être maintenu dans le temps.\\
 
 Nous avons donc décidé de développer sous PHP avec le framework \textit{Symfony2}.
 
 \subsection{Technologie serveur}
 
-Après avoir choisi le langage serveur il nous faut choisir le serveur en question. Deux principales options s'offre à nous: Apache ou Nginx.
+Après avoir choisi le langage serveur il nous faut choisir le serveur en question. Deux principales options s'offrent à nous: Apache ou Nginx.
 
 \subsubsection{Affichage des pages}
 Pour l'affichage des pages statiques Apache doit passer par un module externe, ce qui le rend plus lent que Nginx sur ce point.
-Mais ceci est contrebalancer par le fait que Nginx ne gère pas les pages dynamiques nativement, ce qui le rend dépendant d'un module externe sur ce point.
-Notre site étant composé essentiellement de page dynamiques Apache est plus intéressant sur ce point
+Mais ceci est contrebalancé par le fait que Nginx ne gère pas les pages dynamiques nativement, ce qui le rend dépendant d'un module externe sur ce point.
+Notre site étant composé essentiellement de pages dynamiques Apache est plus intéressant sur ce point
 
 \subsubsection{Place mémoire}
 Nginx a l'avantage d'occuper moins de mémoire que Apache et de consommer moins de RAM.
-Ce point aurai pu être important si notre espace de stockage étais très limiter, mais celui fournis par le CRI nous permet de supporter aussi bien Apache que Nginx.
+Ce point aurait pu être important si notre espace de stockage étais très limité, mais celui fourni par le CRI nous permet de supporter aussi bien Apache que Nginx.
 
 \subsubsection{Configuration et documentation}
-Apache étant plus vieux que Nginx possède une documentation plus fournis que celle de ce derniers.
-La configuration de Apache est plus laborieuse que celle de Nginx par son découpage en nombreux fichiers. Contrairement à Nginx où toute la configuration se fait à un seul endroit.
-Cela permet à Nginx d'être plus rapide et en théorie plus simple à implémenter, mais cela le rend moins flexible.
+Apache étant plus vieux que Nginx, il possède une documentation plus fournis que celle de ce derniers.
+La configuration de Apache est plus laborieuse que celle de Nginx par son découpage en nombreux fichier, contrairement à Nginx où toute la configuration se fait à un seul endroit.
+Cela permet à Nginx d'être plus rapide et en théorie plus simple à implémenter, mais le rend moins flexible.
 
 \subsubsection{Ajout de Modules}
-Si nous voulons ajouter des fonctionnalité à Apache, l'ont peut après coup rajouter des modules à celui-ci. Mais pour Nginx il faut les compiler dans le noyau du logiciel nous même dés l'installation.
+Si nous voulons ajouter des fonctionnalités à Apache, on peut aisément rajouter des modules à celui-ci. Mais pour Nginx il faut les compiler dans le noyau du logiciel nous même dès l'installation.
 
 
 \begin{tabular}{|m{125pt}|m{50pt}|m{50pt}|}
