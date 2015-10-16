@@ -1,5 +1,5 @@
 \LoadClass[10pt,a4paper,openany]{book}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[frenchb]{babel}
 \usepackage{ucs}
 \usepackage[pdftex]{graphicx}
