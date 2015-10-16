@@ -34,17 +34,17 @@ S'il est possible de l'utiliser pour un site web, le logiciel n'a pas été pré
  
  Les principaux avantages de \mysql sont les suivants : 
  \begin{itemize}
- \item Peu de modification à faire lorsque l'on passe le projet en production 
- \item Certaines règles ne sont pas présentes dans d'autre SGBD (comme les vues). 
- \item Efficace avec les faibles jeux de données. En effet, \mysql ne fait pas d'\textit{intégrité référentielle}, ce qui lui permet de gagner en rapidité, au dépend de l'intégrité de la base de donnée. Ainsi, si le site est utilisé par un nombre important d'utilisateurs, le risque d'erreur d'intégrité augmente. 
+ \item peu de modification à faire lorsque l'on passe le projet en production  ;
+ \item certaines règles ne sont pas présentes dans d'autre SGBD (comme les vues) ;
+ \item efficace avec les faibles jeux de données. En effet, \mysql ne fait pas d'\textit{intégrité référentielle}, ce qui lui permet de gagner en rapidité, au dépend de l'intégrité de la base de donnée. Ainsi, si le site est utilisé par un nombre important d'utilisateurs, le risque d'erreur d'intégrité augmente. 
  \end{itemize}
 
 Voyons maintenant les inconvénients :
 
 \begin{itemize}
-\item Documentation assez obscure. 
-\item Prend quelques écarts avec la norme SQL2003
-\item Moins efficace avec les gros jeux de données. 
+\item documentation assez obscure ;
+\item prend quelques écarts avec la norme SQL2003 ;
+\item moins efficace avec les gros jeux de données. 
 \end{itemize} 
 
 Citons une dernière critique majeure de \mysql, apparue lors du rachat du logiciel par Oracle. Le système est alors  passé de libre à propriétaire, ce qui  a fait naitre de nombreuses craintes par la communauté du libre, auquel s'ajoute également un de ses créateurs Michael Widenius. 
@@ -72,19 +72,19 @@ Enfin, chaque version est entièrement testée avant sa sortie. \psql est ainsi 
 Voyons maintenant les avantages de \psql par rapport à \mdb : 
 
 \begin{itemize}
-\item C'est le SGBD qui respecte le plus la norme SQL2003. Il est ainsi plus universel que \mdb
-\item Une documentation très claire (ce qui n'est pas à prendre en compte dans notre cas, puisque \symfony abstrait l'utilisation direct du SGBD)
-\item Extrêmement stable, comme précisé plus haut. 
-\item Extrêmement efficace avec les gros jeux de données. Ainsi, \textit{Météo France} l'utilise pour gérer plus de 4 To de données. Notons que cet avantage n'est pas à prendre en compte non plus : nous ne gérerons jamais plus de 30 go. 
-\item La cohérence de la base est garantie
+\item c'est le SGBD qui respecte le plus la norme SQL2003. Il est ainsi plus universel que \mdb ;
+\item une documentation très claire (ce qui n'est pas à prendre en compte dans notre cas, puisque \symfony abstrait l'utilisation direct du SGBD) ;
+\item extrêmement stable, comme précisé plus haut ;
+\item extrêmement efficace avec les gros jeux de données. Ainsi, \textit{Météo France} l'utilise pour gérer plus de 4 To de données. Notons que cet avantage n'est pas à prendre en compte non plus : nous ne gérerons jamais plus de 30 Go ;
+\item la cohérence de la base est garantie.
 \end{itemize}
 
 \psql a néanmoins quelques inconvénients majeurs  par rapport à \mdb : 
 
 \begin{itemize}
-\item Il est inutilisable tel quel en production. Il faudra donc attentivement configurer le système. 
-\item Il nécessite une maintenance en production pour que la base reste efficace. 
-\item Il est moins efficace avec les très petites bases de données.  
+\item il est inutilisable tel quel en production. Il faudra donc attentivement configurer le système ;
+\item il nécessite une maintenance en production pour que la base reste efficace ;
+\item il est moins efficace avec les très petites bases de données.  
 \end{itemize}
 
 \bigbreak

@@ -8,11 +8,11 @@ Cette partie se concentre sur le prototype déjà créé. Afin de décider si ce
 L'avantage premier à utiliser le prototype comme base pour notre application est le gain de temps. En effet, une bonne partie des spécificités sont déjà présentes et prêtes à être utilisées.
 Les plus importantes sont :
 \begin{itemize}
-\item la création des administrateurs
-\item l'ajout des universités et leur modification
-\item la gestion des étudiants
-\item la possibilité pour les étudiants d'entrer leurs vœux, et pour les administrateurs de les modifier
-\item les affectations ont été implémentées, avec la possibilité de les entrer manuellement par les administrateurs ou de lancer un algorithme de classement
+\item la création des administrateurs ;
+\item l'ajout des universités et leur modification ;
+\item la gestion des étudiants ;
+\item la possibilité pour les étudiants d'entrer leurs vœux, et pour les administrateurs de les modifier ;
+\item les affectations ont été implémentées, avec la possibilité de les entrer manuellement par les administrateurs ou de lancer un algorithme de classement ;
 \item le tableau de bord, il permet de télécharger des fichiers pdf pour impression par les étudiants.
 \end{itemize}
 
@@ -25,16 +25,16 @@ Les tests avaient pour but de découvrir les faiblesses et les limitations de l'
 Elle s'est déroulée comme suit :
 
 \begin{enumerate}
-\item Création d'administrateurs.
-\item Ajout d'écoles et des universités. Plusieurs écoles différentes avec des modalités différentes : Europe ou hors Europe, mobilité ou double diplôme, nombres de places différents, partenariat actif ou non.
-\item Ajout d'étudiants et création de leurs vœux du côté de l'interface étudiant. Certains étudiants de la même année avec le même premier vœu. Des étudiants de deux années différentes avec le même premier vœu. Des étudiants sans vœu.
-\item Modifications et ajout de vœux côté administrateur.
-\item Passage à la phase suivante : verrouillage des vœux afin d'empêcher les étudiants de modifier leurs vœux.
-\item Créations d'affectations fixes, puis utilisation de l'algorithme d'affectation automatiques.
-\item Passage à la phase suivante : rendre les affectations publiques, afin que les étudiants y aient accès.
-\item Vérifications des changements côté étudiant.
-\item Changement des statuts des étudiants au niveau de l'interface administrateur.
-\item Passage à l'année suivante.
+\item Création d'administrateurs ;
+\item Ajout d'écoles et des universités. Plusieurs écoles différentes avec des modalités différentes : Europe ou hors Europe, mobilité ou double diplôme, nombres de places différents, partenariat actif ou non ;
+\item Ajout d'étudiants et création de leurs vœux du côté de l'interface étudiant. Certains étudiants de la même année avec le même premier vœu. Des étudiants de deux années différentes avec le même premier vœu. Des étudiants sans vœu ;
+\item Modifications et ajout de vœux côté administrateur ;
+\item Passage à la phase suivante : verrouillage des vœux afin d'empêcher les étudiants de modifier leurs vœux ;
+\item Créations d'affectations fixes, puis utilisation de l'algorithme d'affectation automatiques ;
+\item Passage à la phase suivante : rendre les affectations publiques, afin que les étudiants y aient accès ;
+\item Vérifications des changements côté étudiant ;
+\item Changement des statuts des étudiants au niveau de l'interface administrateur ;
+\item Passage à l'année suivante ;
 \item Ré-exécution des phases, depuis l'ajout d'écoles jusqu'au passage à l'année suivante.
 \end{enumerate}
 
@@ -92,13 +92,13 @@ Comme décidé lors des entretiens avec nos tuteurs, l'algorithme de tri pourra 
 \subsubsection{Après validation des affectations :}
 Cette partie n'ayant pas été complètement implémentée, de nombreuses fonctionnalités ne sont pas présentes. De plus certaines n'étaient pas explicitées dans le cahier des charges du prototype. Une partie est présentée ci-après :
 \begin{itemize}
-\item La récupération des contrats d'étude signés pour les étudiants.
-\item La possibilité d'entrer les notes après la mobilité.
-\item La possibilité de modifier le contrat d'étude.
-\item Un statut pour exprimer la fin de la mobilité.
-\item L'envoi de document par les étudiants
-\item La génération de fiche de jury
-\item La présence de commentaires écrits par les étudiants à la fin de leur mobilité afin d'aider et d'informer les étudiants qui souhaiterait la même destination.
+\item la récupération des contrats d'étude signés pour les étudiants ;
+\item la possibilité d'entrer les notes après la mobilité ;
+\item la possibilité de modifier le contrat d'étude ;
+\item un statut pour exprimer la fin de la mobilité ;
+\item l'envoi de document par les étudiants ;
+\item la génération de fiche de jury ;
+\item la présence de commentaires écrits par les étudiants à la fin de leur mobilité afin d'aider et d'informer les étudiants qui souhaiterait la même destination.
 \end{itemize}
 
 
