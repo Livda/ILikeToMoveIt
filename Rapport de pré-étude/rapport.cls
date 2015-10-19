@@ -3,7 +3,9 @@
 \usepackage[frenchb]{babel}
 \usepackage{ucs}
 \usepackage[pdftex]{graphicx}
-\usepackage{fullpage,array}
+\usepackage{fullpage}
+\usepackage{here}
+\usepackage{array}
 \usepackage{xspace}
 \usepackage{hyperref}
 \setlength{\parindent}{0cm}
