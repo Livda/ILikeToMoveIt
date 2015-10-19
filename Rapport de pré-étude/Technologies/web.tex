@@ -1,9 +1,9 @@
 \section{Côté serveur}
 
 \subsection{Langage serveur}
-Le choix technologique central de notre projet est le choix du langage côté serveur. De nombreux choix s'offraient à nous, notamment: \textit{Ruby}, \textit{NodeJs}, \jee, PHP, \textit{Perl}, etc.
+Le choix technologique central de notre projet est le choix du langage côté serveur. De nombreux choix s'offraient à nous, notamment: \textit{Ruby}, \textit{NodeJs}, \jee, \php, \textit{Perl}, etc.
 
-Pour des questions de rapidité de développement, un prototype fonctionnel nous étant demandé pour fin décembre, nous avons restreint nos choix à deux technologies: \jee, pour sa prise en main facile et sa maîtrise par certains membres de l'équipe et PHP pour sa rapidité d'apprentissage, mais essentiellement car comme mentionné dans la partie 2, nous possédons un prototype de notre application développé en PHP sous le framework \textit{Symfony2}. Ce qui permettra de grandement améliorer notre vitesse de développement.\\
+Pour des questions de rapidité de développement, un prototype fonctionnel nous étant demandé pour fin décembre, nous avons restreint nos choix à deux technologies: \jee, pour sa prise en main facile et sa maîtrise par certains membres de l'équipe et \php pour sa rapidité d'apprentissage, mais essentiellement car comme mentionné dans la partie 2, nous possédons un prototype de notre application développé en \php sous le framework \symfony. Ce qui permettra de grandement améliorer notre vitesse de développement.\\
 
 
 \subsubsection{Rapidité d'apprentissage}
@@ -12,8 +12,8 @@ L'avantage de \jee c'est qu'il ne faut connaître que le langage Java et apprend
 Ce langage étant maîtrisé déjà par toute l'équipe, l'apprentissage devrait être très rapide et donc le développement vite commencé.
 
 \paragraph{Symfony2}
-\textit{Symfony2} nécessite la connaissance du PHP et de toute une norme assez lourde. 
-Le PHP et la norme n'étant pas connus par toute l'équipe le temps de formation sera plus long qu'avec \jee.
+\symfony nécessite la connaissance du \php et de toute une norme assez lourde. 
+Le \php et la norme n'étant pas connus par toute l'équipe le temps de formation sera plus long qu'avec \jee.
 
 \subsubsection{Facilité de gestion de la Base de données}
 \paragraph{Java EE}
@@ -21,14 +21,14 @@ Nous devrons développer toutes les classes d'écriture et de lecture dans la ba
 Nous pourrions éviter cela en passant par un framework, mais nous perdrions alors l'avantage de la rapidité d'apprentissage de \jee vis à vis de \symfony
 
 \paragraph{Symfony2}
-\textit{Symfony2} possède un outils appelé Doctrine qui génère automatiquement la base de données, les méthodes d'accès et les variables pour permette le traitement dans la page dynamique. Très peu de seront donc développé, notamment les plus poussées.
+\symfony possède un outils appelé Doctrine qui génère automatiquement la base de données, les méthodes d'accès et les variables pour permette le traitement dans la page dynamique. Très peu de seront donc développé, notamment les plus poussées.
 
 \subsubsection{Rapidité de développement}
 \paragraph{Java EE}
 Le développement en \jee est relativement rapide, mais nous devons abandonner le prototype et passer plus de temps dans la création de la base de données.
 
 \paragraph{Symfony2}
-Avec \textit{Symfony2} nous partons d'un prototype déjà bien avancé et une fois la norme apprise, le développement est tout aussi performant que sur \jee.
+Avec \symfony nous partons d'un prototype déjà bien avancé et une fois la norme apprise, le développement est tout aussi performant que sur \jee.
 
 \begin{figure}[h]
 \begin{center}
@@ -48,10 +48,10 @@ Avec \textit{Symfony2} nous partons d'un prototype déjà bien avancé et une fo
 \end{figure}
 Nous pouvons donc conclure que malgré un temps d'apprentissage plus long, une fois celui-ci acquis, l'outil Doctrine, sa norme et le prototype nous permettront d'être plus rapides que de tout reprendre à zéro avec \jee.
 
-Pour implémenter toutes les fonctionnalités nécessaire au fonctionnement de l'application (gestion des pdf, communication avec le CAS et le LDAP), \textit{Symfony2} possède une grande communauté, ce qui laisse envisager que des outils résolvant ces problématiques ont déjà été développés.
-De plus, la norme stricte de \textit{Symfony2} permet d'avoir une organisation et une reprise du travail d'autrui plus facilement. Ce qui permettra à notre code d'être maintenu dans le temps.\\
+Pour implémenter toutes les fonctionnalités nécessaire au fonctionnement de l'application (gestion des pdf, communication avec le CAS et le LDAP), \symfony possède une grande communauté, ce qui laisse envisager que des outils résolvant ces problématiques ont déjà été développés.
+De plus, la norme stricte de \symfony permet d'avoir une organisation et une reprise du travail d'autrui plus facilement. Ce qui permettra à notre code d'être maintenu dans le temps.\\
 
-Nous avons donc décidé de développer sous PHP avec le framework \textit{Symfony2}.
+Nous avons donc décidé de développer sous \php avec le framework \symfony.
 
 \subsection{Technologie serveur}
 
