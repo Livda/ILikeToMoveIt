@@ -79,12 +79,12 @@ Nginx a l'avantage d'occuper moins de mémoire que Apache et de consommer moins 
 Ce point aurait pu être important si notre espace de stockage étais très limité, mais celui fourni par le CRI nous permet de supporter aussi bien Apache que Nginx.
 
 \subsubsection{Configuration et documentation}
-Apache étant plus vieux que Nginx, il possède une documentation plus fournie que celle de ce dernier.
+Apache étant plus vieux que Nginx, il possède une documentation plus fournis que celle de ce dernier.
 La configuration de Apache est plus laborieuse que celle de Nginx par son découpage en nombreux fichier, contrairement à Nginx où toute la configuration se fait à un seul endroit.
-Cela permet à Nginx d'être plus rapide et en théorie plus simple à implémenter.
+Cela permet à Nginx d'être plus rapide et en théorie plus simple à implémenter, mais le rend moins flexible.
 
 \subsubsection{Ajout de Modules}
-Si nous voulons ajouter des fonctionnalités à Apache, on peut aisément rajouter des modules à celui-ci, néanmois, Apache intègre nativement la majorité des modules nescessaires à une utilisation \og normale \fg. Nginx ne gère nativement aucun module et ne sert que de serveur de front. Nginx délègue à des modules toutes les tâches via un fichier de configuration.
+Si nous voulons ajouter des fonctionnalités à Apache, on peut aisément rajouter des modules à celui-ci. Mais pour Nginx il faut les compiler dans le noyau du logiciel nous même dès l'installation.
 
 \begin{figure}[H]
 \begin{center}
@@ -98,7 +98,7 @@ Si nous voulons ajouter des fonctionnalités à Apache, on peut aisément rajout
 	\hline
 	Configuration et documentation & + & - \\
 	\hline
-	Ajout de Modules & + & ++ \\
+	Ajout de Modules & + & -- \\
 	\hline
 \end{tabular} \vspace*{5mm}
 \caption{Récaputilatif Apache vs Nginx}
@@ -107,5 +107,5 @@ Si nous voulons ajouter des fonctionnalités à Apache, on peut aisément rajout
 
 En dernier point, le prototype que nous possédons a été configuré pour Apache.
 
-Avec tout ces points, nous décidons d'installer Nginx pour sa rapidité de configuration.
+Avec tout ces points, nous décidons d'installer *Nginx//Apache* pour :
 
