@@ -8,22 +8,7 @@ De plus, lors de notre réunion avec les agents du Centre des Ressources en Info
 Le choix le plus simple serait donc de continuer avec ce qui a déjà été utilisé. 
 Cependant, le changement du système est extrêmement simple à effectuer, nous allons donc légitimement  discuter des avantages et inconvénients de ces deux logiciels, mais également de certains autres, extrêmement présents dans ce domaine. 
 
-\subsection{SqLite ou Oracle, deux solutions inappropriées}
-
-Nous commencerons premièrement par deux solutions qui ne sont pas adaptées à notre problème : Oracle Database et SqLite. 
-
-\paragraph*{Oracle Database } est un \textit{SGBD} créé par \textit{Larry Ellison}, et racheté depuis par Oracle Corporation. C'est aujourd'hui le système le plus utilisé dans le monde de l'entreprise, grâce aux fonctionnalités qu'il propose. 
-Cependant, les fonctionnalités supplémentaires sont utiles pour un nombre élevé d'utilisateurs en même temps, ou pour un grand nombre de données à stocker. Notre application ne connaitra jamais plus de 500 utilisateurs simultanées, et notre serveur sera limité en taille à 30 gigaoctets. Les plus d'Oracle ne nous seront donc pas utiles. 
-
-L'inconvénient majeur d'Oracle est le prix. Le logiciel est relativement cher, d'autant plus pour des propriétés inutiles dans notre cas.
-Nous ne nous tournerons donc pas vers cette solution, ni vers toute solutions payantes. Les licenses des SGBD donc nous parlerons maintenant seront donc toutes gratuites.  
-
-
-\paragraph*{SqLite} est une bibliothèque légère, ce qui lui permet d'être facilement intégrée aux applications. C'est la bibliothèque la plus distribuée au monde, par example Firefox, iTunes ou Androïd l'utilisent pour gérer leurs données. 
-
-
-S'il est possible de l'utiliser pour un site web, le logiciel n'a pas été prévu pour cet usage ; il est censé gérer quelques utilisateurs, et un faible jeu  de données. L'utilisation simultanée par un nombre plus élevé d'utilisateurs ralentirait considérablement le fonctionnement de l'application. Nous ne retiendrons donc pas cette solution, ou  tout autre système embarqué. 
-
+Parmi tous les SGBD existant, nous excluons dors et déjà les solutions comme Oracle Database, payant et inadapté à notre usage, où comme SqLite, qui est destiné à être embarqué au sein des applications. 
 \subsection{MySQL et MariaDB}
  
  Comme indiqué en introduction, \mysql est le SGBD utilisé lors de la création du prototype. Ce système, possédé par Oracle Corporation, est sous double licence libre et propriétaire. La licence de \mysql peut donc être payante ou gratuite selon la nature du produit : propriétaire ou libre. Dans notre cas, nous utiliserons l'API tierce \symfony, nous n'utiliserons donc pas directement \mysql. Ici, sa licence est donc gratuite. 

@@ -1,69 +1,73 @@
 \section{Côté serveur}
 
 \subsection{Langage serveur}
-Le choix technologique central de notre projet est le choix du langage côté serveur. De nombreux choix s'offraient à nous, notamment: \textit{Ruby}, \textit{NodeJs}, \jee, \php, \textit{Perl}, etc.
+Le choix technologique central de notre projet est la sélection du langage côté serveur. De nombreuses technologies s'offrent à nous, notamment: \textit{Ruby}, \textit{NodeJs}, \jee, \php, \textit{Perl}, etc.
 
-Pour des questions de rapidité de développement, un prototype fonctionnel nous étant demandé pour fin décembre, nous avons restreint nos choix à deux technologies: \jee, pour sa prise en main facile et sa maîtrise par certains membres de l'équipe et \php pour sa rapidité d'apprentissage, mais essentiellement car comme mentionné dans la partie 2, nous possédons un prototype de notre application développé en \php sous le framework \symfony. Ce qui permettra de grandement améliorer notre vitesse de développement.
+Un prototype fonctionnel nous étant demandé pour fin décembre, nous avons restreint nos choix à deux technologies : \jee et \php.
+ 
+D'un côté \jee offre une prise en main facile et est maîtrisé par certains membres de l'équipe. De l'autre côté, \php est rapide à apprendre. De plus, comme mentionné dans la partie 2, nous possédons un prototype de l'application développé en \php sous le framework \symfony. Nous gagnerions  donc du temps à utiliser ce prototype comme base. 
 
 \medbreak
 
 
 \subsubsection{Rapidité d'apprentissage}
 \paragraph{Java EE}
-L'avantage de \jee c'est qu'il ne faut connaître que le langage Java et apprendre à se servir de quelques bibliothèques dédiées au langage serveur.
-Ce langage étant maîtrisé déjà par toute l'équipe, l'apprentissage devrait être très rapide et donc le développement vite commencé.
+L'avantage de \jee est qu'il ne faut connaître que le langage \textit{Java} et apprendre à se servir de quelques bibliothèques dédiées au langage serveur.
+
+Ce langage étant déjà maîtrisé  par  l'équipe, l'apprentissage devrait être rapide et donc le développement commencer plus rapidement.
 
 \paragraph{Symfony2}
-\symfony nécessite la connaissance du \php et de toute une norme assez lourde. 
+\symfony nécessite la connaissance de \php et de toute une norme assez lourde. 
 Le \php et la norme n'étant pas connus par toute l'équipe le temps de formation sera plus long qu'avec \jee.
 
 \subsubsection{Facilité de gestion de la Base de données}
 \paragraph{Java EE}
-Nous devrons développer toutes les classes d'écriture et de lecture dans la base de données. De plus nous devrons créer tout les objets Java destinés à recevoir les données lues dans la base pour suivre le pattern DAO et pouvoir se servir des pages dynamiques de \jee.
-Nous pourrions éviter cela en passant par un framework, mais nous perdrions alors l'avantage de la rapidité d'apprentissage de \jee vis à vis de \symfony
+Nous devrons développer toutes les classes d'écriture et de lecture dans la base de données. De plus nous devrons créer tous les objets Java destinés à recevoir les données lues dans la base pour suivre le pattern DAO et pouvoir se servir des pages dynamiques de \jee.
+
+Nous pourrions éviter cela en passant par un framework, mais nous perdrions alors l'avantage de la rapidité d'apprentissage de \jee vis-à-vis de \symfony.
 
 \paragraph{Symfony2}
-\symfony possède un outils appelé Doctrine qui génère automatiquement la base de données, les méthodes d'accès et les variables pour permette le traitement dans la page dynamique. Très peu de seront donc développé, notamment les plus poussées.
+\symfony possède un outils appelé Doctrine qui génère automatiquement la base de données, les méthodes d'accès et les variables pour permette le traitement dans la page dynamique. Très peu de technologies seront donc à développer.
 
 \subsubsection{Rapidité de développement}
 \paragraph{Java EE}
 Le développement en \jee est relativement rapide, mais nous devons abandonner le prototype et passer plus de temps dans la création de la base de données.
 
 \paragraph{Symfony2}
-Avec \symfony nous partons d'un prototype déjà bien avancé et une fois la norme apprise, le développement est tout aussi performant que sur \jee.
+Avec \symfony nous partons d'un prototype déjà bien avancé et, une fois la norme apprise, le développement est bien plus rapide qu'avec \jee. Nous pourrions en effet utiliser la console \symfony qui permet de générer une grande partie du code. 
 
 \begin{figure}[H]
 \begin{center}
-\begin{tabular}{|m{180pt}|m{50pt}|m{50pt}|}
+\begin{tabular}{|l|c|c|}
 	\hline
 	\null & \textbf{Java EE} & \textbf{Symfony2} \\
 	\hline
-	Rapidité d'apprentissage & ++ & +-\\
+	Rapidité d'apprentissage & + + & + --\\
 	\hline
-	Gestion de la base de données & -- & ++\\
+	Gestion de la base de données & -- -- & + +\\
 	\hline
-	Rapidité de développement & +- & ++ \\
+	Rapidité de développement & + -- & + + \\
 	\hline
 \end{tabular} \vspace*{5mm}
 \caption{Récapitulatif Java EE vs Symfony2}
 \end{center}
 \end{figure}
-Nous pouvons donc conclure que malgré un temps d'apprentissage plus long, une fois celui-ci acquis, l'outil Doctrine, sa norme et le prototype nous permettront d'être plus rapides que de tout reprendre à zéro avec \jee.
-
+Nous pouvons donc conclure que, malgré un temps d'apprentissage plus long,  l'outil Doctrine, sa norme et le prototype nous permettront d'être plus rapides que de tout reprendre à zéro avec \jee.
+\smallbreak
 Pour implémenter toutes les fonctionnalités nécessaire au fonctionnement de l'application (gestion des pdf, communication avec le CAS et le LDAP), \symfony possède une grande communauté, ce qui laisse envisager que des outils résolvant ces problématiques ont déjà été développés.
-De plus, la norme stricte de \symfony permet d'avoir une organisation et une reprise du travail d'autrui plus facilement. Ce qui permettra à notre code d'être maintenu dans le temps.\
 
+De plus, la norme stricte de \symfony permet d'avoir une organisation et une reprise du travail d'autrui plus aisée, ce qui permettra à notre code d'être maintenu dans le temps.
 \medbreak
 
 Nous avons donc décidé de développer sous \php avec le framework \symfony.
 
-\subsubsection{Les plug-in \symfony}
+\subsubsection{Les bundles \symfony}
 
-Le projet nécessite l'utilisation de CAS (Central Authentification Service) pour l'authentification des utilisateurs ainsi que l'accès au LDAP de l'INSA (Lightweight Directory Access Protocol). Pour cela, l'ajout de plugin pour \symfony semble la manière la plus simple pour résoudre ce problème.
+Le projet nécessite l'utilisation de CAS (Central Authentification Service) pour l'authentification des utilisateurs ainsi que l'accès au LDAP de l'INSA (Lightweight Directory Access Protocol). Pour cela, l'ajout de bundles pour \symfony semble la manière la plus simple pour résoudre ce problème.
 
-Pour le CAS, il n'y a que peu de plugins \symfony fonctionnels. Néanmoins, le plugin \og BeSimpleSso-AuthBundle \fg semble, après quelques légères modifications, pouvoir répondre au cahier des charges du projet. En effet, bien que ce soit le meilleur plugin CAS pour \symfony, celui-ci n'est plus mis à jour depuis 11 mois et les nouvelles versions de \symfony nécessitent du plugin qu'il soit légèrement modifié pour fonctionner parfaitement.
+Pour le CAS, il n'y a que peu de bundles fonctionnels. Néanmoins, le bundle \og BeSimpleSso-AuthBundle \fg semble, après quelques légères modifications, pouvoir répondre au cahier des charges du projet. En effet, bien que ce soit le meilleur plugin CAS pour \symfony, celui-ci n'est plus mis à jour depuis 11 mois et les nouvelles versions de \symfony nécessitent du bundle qu'il soit légèrement modifié pour fonctionner parfaitement.
 
-Pour LDAP, deux plugin sortent du lot : \og FR3DLdapBundle \fg ainsi que \og LdapBundle \fg. Des deux plugin, le plus utilisé est le premier ce qui signifie qu'il nous sera plus aisé de trouver de la documentation, ou d’autres utilisateurs pouvant nous fournir des informations en cas de besoins. C'est pourquoi l'utilisation du plugin \og FR3DLdapBundle \fg semble être le meilleur choix.
+Pour LDAP, deux plugin sortent du lot : \og FR3DLdapBundle \fg ainsi que \og LdapBundle \fg. Des deux bundles, le plus utilisé est le premier ce qui signifie qu'il nous sera plus aisé de trouver de la documentation, ou d’autres utilisateurs pouvant nous fournir des informations en cas de besoins. C'est pourquoi l'utilisation du bundle \og FR3DLdapBundle \fg semble être le meilleur choix.
 
 \subsection{Technologie serveur}
 
@@ -71,15 +75,15 @@ Après avoir choisi le langage serveur il nous faut choisir le serveur en questi
 
 \subsubsection{Affichage des pages}
 Pour l'affichage des pages statiques Apache doit passer par un module externe, ce qui le rend plus lent que Nginx sur ce point.
-Mais ceci est contrebalancé par le fait que Nginx ne gère pas les pages dynamiques nativement, le rendant dépendant d'un module externe.
-Notre site étant composé essentiellement de pages dynamiques Apache est plus intéressant.
+Ceci est contrebalancé par le fait que Nginx ne gère pas les pages dynamiques nativement, le rendant dépendant d'un module externe.
 
 \subsubsection{Place mémoire}
 Nginx a l'avantage d'occuper moins de mémoire que Apache et de consommer moins de RAM.
-Ce point aurait pu être important si notre espace de stockage étais très limité, mais celui fourni par le CRI nous permet de supporter aussi bien Apache que Nginx.
 
+Le serveur mis à disposition par le CRI a une capacité de 30 go. Cependant il faut en déduire  la place prise par l'installation de l'OS. Ainsi, nous n'avons que 15 go d'utilisable. Il peut donc être intéressant d'utiliser Nginx
 \subsubsection{Configuration et documentation}
-Apache étant plus vieux que Nginx, il possède une documentation plus fournis que celle de ce dernier.
+Apache étant plus vieux que Nginx, il possède une documentation plus fournis.
+
 La configuration de Apache est plus laborieuse que celle de Nginx par son découpage en nombreux fichier, contrairement à Nginx où toute la configuration se fait à un seul endroit.
 Cela permet à Nginx d'être plus rapide et en théorie plus simple à implémenter, mais le rend moins flexible.
 
@@ -88,24 +92,22 @@ Si nous voulons ajouter des fonctionnalités à Apache, on peut aisément rajout
 
 \begin{figure}[H]
 \begin{center}
-\begin{tabular}{|m{175pt}|m{50pt}|m{50pt}|}
+\begin{tabular}{|m{175pt}|c|c|}
 	\hline
 	\null & \textbf{Apache} & \textbf{Nginx} \\
 	\hline
-	Affichage des pages & ++ & -\\
+	Affichage des pages & + + & + +\\
 	\hline
-	Place mémoire & +- & ++\\
+	Place mémoire & + -- & + +\\
 	\hline
-	Configuration et documentation & + & - \\
+	Configuration et documentation & -- -- & + + \\
 	\hline
-	Ajout de Modules & + & -- \\
+	Ajout de Modules & + & -- --  \\
 	\hline
 \end{tabular} \vspace*{5mm}
 \caption{Récaputilatif Apache vs Nginx}
 \end{center}
 \end{figure}
 
-En dernier point, le prototype que nous possédons a été configuré pour Apache.
 
-Avec tout ces points, nous décidons d'installer *Nginx//Apache* pour :
-
+Avec tout ces points, nous décidons d'installer Nginx.
