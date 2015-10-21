@@ -3,14 +3,14 @@
 
 La génération de PDF est assez simple. On peut en effet la rendre fonctionnelle grâce à certains bundle que l'on peut importer directement dans \symfony.
 
-Nous avons décidé d'utiliser \textit{Wkhtmltopdf} pour réaliser cette tache.
+Nous avons décidé d'utiliser \textit{Wkhtmltopdf} pour réaliser cette tâche.
 Nous avons fais ce choix car il s'agit du module le plus complet, le plus utilisé et donc le plus documenté sur le Web. Cela facilitera le développement et nous gagnerons en rapidité de codage.
 
-Ce module nous fournira les méthodes nécessaires pour générer nos pdf.
+Ce module nous fournira les méthodes nécessaires pour générer nos fichiers PDF.
 
 
 \subsection{Signature électronique}
-Les correspondants RI des différentes universités doivent signer certains documents pour montrer leur accord (ou désaccord), comme par exemple pour valider le \og Learning Agreement \fg{}.
+Les correspondants RI des différentes universités doivent signer certains documents pour montrer leur accord (ou désaccord), comme par exemple pour valider le \og Learning Agreement \fg.
 
 Nous nous sommes donc penchés sur la légalité des signatures électroniques.
 Les lois sur les signatures électroniques sont assez vagues mais ce que on peut retenir c'est que pour qu'une signature électronique soit valide, elle doit respecter trois critères:
@@ -20,11 +20,11 @@ Les lois sur les signatures électroniques sont assez vagues mais ce que on peut
 \item Assurer l'intégrité de l'écrit signé
 \end{itemize}
 Autrement dit, apposer une signature pré-scannée à un document n'est pas valide.
-De nos jour seules les procédés de signature à base de cryptologie à clé publique sont viables.
+De nos jour, seuls les procédés de signature à base de cryptologie à clé publique sont viables.
 
-Plusieurs sites et logiciels permettent de signer électroniquement des documents (\textit{Chamberdesign}, \textit{Univerdesign}) mais ce sont des procédés souvent long et laborieux qui ne feraient pas gagner un temps considérable vis à vis de la méthode actuel.
-Devons-nous donc mettre en avant la rapidité et l'ergonomie en apposant simplement la signature sur les documents PDF créés ? Ou privilégier le côté légal de la chose en passant par des logiciels ou sites web générant des signatures électroniques sécurisés.
+Plusieurs sites et logiciels permettent de signer électroniquement des documents (\textit{Chamberdesign}, \textit{Univerdesign}) mais ce sont des procédés souvent long et laborieux qui ne feraient pas gagner un temps considérable vis à vis de la méthode actuelle.
+Devons-nous donc mettre en avant la rapidité et l'ergonomie en apposant simplement la signature sur les documents PDF créés ? Ou privilégier le côté légal de la chose en passant par des logiciels ou sites web générant des signatures électroniques sécurisées.
 
-La méthode actuelle étant de scanner et de réimprimer les dossiers des étudiant, nous pouvons garder la même valeur juridique en apposant une signature pré-scanné sur les documents nécessaires. Cela à une moins grande valeur que la signature manuelle, mais rendre une signature électronique officielle serait trop laborieux à mettre en place car on devrait forcément passer par des éléments externes (sites, logiciels). De plus, cela demanderai du temps supplémentaires aux correspondants RI.
+La méthode actuelle étant de scanner et de réimprimer les dossiers des étudiants, nous pouvons garder la même valeur juridique en apposant une signature pré-scannée sur les documents nécessaires. Cela a une moins grande valeur que la signature manuelle, mais rendre une signature électronique officielle serait trop laborieux à mettre en place car nous devrions forcément passer par des éléments externes (sites, logiciels). De plus, cela demanderait des manipulations supplémentaires aux correspondants RI.
 
 Nous choisirons donc de n'apposer que la signature des correspondants RI sur les documents le nécessitant.
