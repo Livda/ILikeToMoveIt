@@ -49,10 +49,10 @@ Avec \symfony nous partons d'un prototype déjà bien avancé et, une fois la no
 	Rapidité de développement & + -- & + + \\
 	\hline
 \end{tabular} \vspace*{5mm}
-\caption{Récapitulatif Java EE vs Symfony2}
+\caption{\label{FrameworkTable} Récapitulatif Java EE vs Symfony2}
 \end{center}
 \end{figure}
-Nous pouvons donc conclure que, malgré un temps d'apprentissage plus long,  l'outil Doctrine, sa norme et le prototype nous permettront d'être plus rapides que de tout reprendre à zéro avec \jee.
+D'après la figure, \ref{FrameworkTable} nous pouvons conclure que, malgré un temps d'apprentissage plus long,  l'outil Doctrine, sa norme et le prototype nous permettront d'être plus rapides que de tout reprendre à zéro avec \jee.
 \smallbreak
 Pour implémenter toutes les fonctionnalités nécessaire au fonctionnement de l'application (gestion des pdf, communication avec le CAS et le LDAP), \symfony possède une grande communauté, ce qui laisse envisager que des outils résolvant ces problématiques ont déjà été développés.
 
@@ -65,7 +65,7 @@ Nous avons donc décidé de développer sous \php avec le framework \symfony.
 
 Le projet nécessite l'utilisation de CAS (Central Authentification Service) pour l'authentification des utilisateurs ainsi que l'accès au LDAP de l'INSA (Lightweight Directory Access Protocol). Pour cela, l'ajout de bundles pour \symfony semble la manière la plus simple pour résoudre ce problème.
 
-Pour le CAS, il n'y a que peu de bundles fonctionnels. Néanmoins, le bundle \og BeSimpleSso-AuthBundle \fg semble, après quelques légères modifications, pouvoir répondre au cahier des charges du projet. En effet, bien que ce soit le meilleur plugin CAS pour \symfony, celui-ci n'est plus mis à jour depuis 11 mois et les nouvelles versions de \symfony nécessitent du bundle qu'il soit légèrement modifié pour fonctionner parfaitement.
+Dans le cas du CAS, il n'y a que peu de bundles fonctionnels. Néanmoins, le bundle \og BeSimple-SsoAuthBundle \fg semble, après quelques légères modifications, pouvoir répondre au cahier des charges du projet. En effet, bien que ce soit le meilleur plugin CAS pour \symfony, celui-ci n'est plus mis à jour depuis 11 mois et les nouvelles versions de \symfony nécessitent du bundle qu'il soit légèrement modifié pour fonctionner parfaitement.
 
 Pour LDAP, deux plugin sortent du lot : \og FR3DLdapBundle \fg ainsi que \og LdapBundle \fg. Des deux bundles, le plus utilisé est le premier ce qui signifie qu'il nous sera plus aisé de trouver de la documentation, ou d’autres utilisateurs pouvant nous fournir des informations en cas de besoins. C'est pourquoi l'utilisation du bundle \og FR3DLdapBundle \fg semble être le meilleur choix.
 
@@ -88,7 +88,8 @@ La configuration de Apache est plus laborieuse que celle de Nginx par son décou
 Cela permet à Nginx d'être plus rapide et en théorie plus simple à implémenter, mais le rend moins flexible.
 
 \subsubsection{Ajout de Modules}
-Si nous voulons ajouter des fonctionnalités à Apache, on peut aisément rajouter des modules à celui-ci. Mais pour Nginx il faut les compiler dans le noyau du logiciel nous même dès l'installation.
+Si nous voulons ajouter des fonctionnalités à Apache, on peut aisément rajouter des modules à celui-ci, néanmoins, Apache intègre nativement la majorité des modules nécessaires à une utilisation \og normale \fg. Nginx ne gère nativement aucun module et ne sert que de serveur de front. Nginx délègue à des modules toutes les tâches via un fichier de configuration.
+
 
 \begin{figure}[H]
 \begin{center}
@@ -96,18 +97,18 @@ Si nous voulons ajouter des fonctionnalités à Apache, on peut aisément rajout
 	\hline
 	\null & \textbf{Apache} & \textbf{Nginx} \\
 	\hline
-	Affichage des pages & + + & + +\\
+	Affichage des pages & + + & -- +\\
 	\hline
 	Place mémoire & + -- & + +\\
 	\hline
-	Configuration et documentation & -- -- & + + \\
+	Configuration et documentation & + -- & + -- \\
 	\hline
-	Ajout de Modules & + & -- --  \\
+	Ajout de Modules & + & + +  \\
 	\hline
 \end{tabular} \vspace*{5mm}
-\caption{Récaputilatif Apache vs Nginx}
+\caption{\label{ServerTable} Récapitulatif Apache vs Nginx}
 \end{center}
 \end{figure}
 
 
-Avec tout ces points, nous décidons d'installer Nginx.
+D'après le tableau \ref{ServerTable}, dans notre cas d'utilisation, Apache et Nginx ont des performances sensiblement équivalentes. De plus, Nginx se configure plus aisément. D'où le choix final d'installer Nginx.
