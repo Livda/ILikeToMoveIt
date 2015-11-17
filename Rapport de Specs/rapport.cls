@@ -8,6 +8,7 @@
 \usepackage{array}
 \usepackage{xspace}
 \usepackage{hyperref}
+%\usepackage{titlingpage}
 \setlength{\parindent}{0cm}
 %\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 
