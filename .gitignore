@@ -14,7 +14,8 @@ hs_err_pid*
 #Latex files
 *.aux
 *.log
-*.pdf
+RAPPORT.pdf
+Rapport.pdf
 *.gz
 *.toc
 *.out
