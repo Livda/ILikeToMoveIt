@@ -1,29 +1,29 @@
 Le modèle de notre application sera constitué d'une base de donnée sql. Nous avons défini son architecture tel qui suis:
 
-image du truc, un pti retro engeenering avec mes entity comme Jeannot avais fait avec le truc à Nico?
+%image du truc, un pti retro engeenering avec mes entity comme Jeannot avais fait avec le truc à Nico?
 
-\subject{Les modules}
+\subsection{Les modules}
 Plusieurs modules ressortent de cette base, ils formeront nos bundle
-\begin{itemsize}
+\begin{itemize}
 \item Utilisateurs
-\item Universitées
+\item Universités
 \item Fichiers
 \item Affectation
 \item Généralité
-\end{itemsize}
+\end{itemize}
 
 \subsection{Utilisateur}
 
 Pour gérer les utilisateurs, nous utiliserons le bundle FOSUser qui contiens des méthodes et une structure de donnée prévue pour cela.
-Les utilisateurs possèdent un état qui défini leur avancement dans la procédure d'affectation. c'est lui qui déterminera la vue d'acceuil qui s'afficherapour l'étudiant. 
-Chaque année, après une action d'un admin, les étudiants seront chargez depuis le lldap pour mettre à jour la bdd et définir si un étudiant a redoubler ou non.
+Les utilisateurs possèdent un état qui défini leur avancement dans la procédure d'affectation. c'est lui qui déterminera la vue d'accueil qui s'affichera pour l'étudiant. 
+Chaque année, après une action d'un administrateur, les étudiants seront chargez depuis le LDAP pour mettre à jour la base de données et définir si un étudiant a redoubler ou non.
 Ces utilisateurs sont assuré d'être unique pour toujours grâce à leur id étudiant.
 
-\subsection{Universitées}
+\subsection{Universités}
 
-Les universitées possède des spécificité qui serviront pour les tris dans les vues (toefl, Europe, etc).
-Elle sont associé à une classe Place qui permet de définir le nombre de place disponible pour un département à un semestre donnée (ou double diplome). Une université pouvant proposé plusieurs trype de mobilité cette classe est séparée.
-Il existera dans le futur une classe pour définir les infos sur la page de chaque universitée, mais ne sachant pas encore exactement les champs nécessaire, nous n'avons pas implémenter encore la classe.
+Les universités possède des spécificité qui serviront pour les tris dans les vues (toefl, Europe, etc).
+Elle sont associé à une classe Place qui permet de définir le nombre de place disponible pour un département à un semestre donné (ou double diplôme). Une université pouvant proposé plusieurs type de mobilité cette classe est séparée.
+Il existera dans le futur une classe pour définir les infos sur la page de chaque université, mais ne sachant pas encore exactement les champs nécessaire, nous n'avons pas implémenter encore la classe.
 
 \subsection{Fichiers}
 
