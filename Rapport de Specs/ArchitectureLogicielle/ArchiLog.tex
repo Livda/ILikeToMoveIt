@@ -1,0 +1,43 @@
+Le modèle de notre application sera constitué d'une base de donnée sql. Nous avons défini son architecture tel qui suis:
+
+image du truc, un pti retro engeenering avec mes entity comme Jeannot avais fait avec le truc à Nico?
+
+\subject{Les modules}
+Plusieurs modules ressortent de cette base, ils formeront nos bundle
+\begin{itemsize}
+\item Utilisateurs
+\item Universitées
+\item Fichiers
+\item Affectation
+\item Généralité
+\end{itemsize}
+
+\subsection{Utilisateur}
+
+Pour gérer les utilisateurs, nous utiliserons le bundle FOSUser qui contiens des méthodes et une structure de donnée prévue pour cela.
+Les utilisateurs possèdent un état qui défini leur avancement dans la procédure d'affectation. c'est lui qui déterminera la vue d'acceuil qui s'afficherapour l'étudiant. 
+Chaque année, après une action d'un admin, les étudiants seront chargez depuis le lldap pour mettre à jour la bdd et définir si un étudiant a redoubler ou non.
+Ces utilisateurs sont assuré d'être unique pour toujours grâce à leur id étudiant.
+
+\subsection{Universitées}
+
+Les universitées possède des spécificité qui serviront pour les tris dans les vues (toefl, Europe, etc).
+Elle sont associé à une classe Place qui permet de définir le nombre de place disponible pour un département à un semestre donnée (ou double diplome). Une université pouvant proposé plusieurs trype de mobilité cette classe est séparée.
+Il existera dans le futur une classe pour définir les infos sur la page de chaque universitée, mais ne sachant pas encore exactement les champs nécessaire, nous n'avons pas implémenter encore la classe.
+
+\subsection{Fichiers}
+
+Il y as deux types de fichiers à géré, les fichiers vierges mis à disposition des élèves et ceux qui sont complété.
+Les fichiers vierges peuvent être associé à des spécificité pour les proposer d'office quand on est affecté dans une université avec celles ci.
+Les fichier à compléter sont lié à l'année et au département pour permettre de les garder en base un certain temps et les triés relativement facilement.
+
+\subsection{Affectation}
+
+Dans cette partie nous trouvons les voeux et le placement d'un candidat. Les voeux sont lié au département et à l'année en plus de l'utilisateur pour permettre là aussi un historique.
+Le placement est l'endroit définitif o`u (vive linux ont peut pas faire cet accent) l'étudiant est affecté. Il possède aussi la problématique de l'historique.
+
+\subsection{Généralité}
+
+Il reste l'année et les département. 
+Il existera un département ALL pour permettre de définir un nombre de place diponible pour une université commun à toute l'insa et non pas à un seul département.
+
