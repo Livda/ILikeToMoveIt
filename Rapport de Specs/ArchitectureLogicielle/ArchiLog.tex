@@ -50,7 +50,7 @@ Il existera un département \textbf{ALL} pour permettre de définir un nombre de
 
 \section{Architecture de l'application}
 
-Le diagramme \ref{chap::archi_logicielle} présente les différents éléments qui composent notre application. Nous avons donc le serveur web, \textit{Nginx}, qui fait le lien entre la base de donnée \mdb et l'application développée en \symfony. Ceux-ci communiquent à l'aide du driver pdo de la base de donnée. De plus, le bundle Doctrine s'occupe des requêtes \sql de façon transparente.
+Le diagramme \ref{fig::archi_logicielle} présente les différents éléments qui composent notre application. Nous avons donc le serveur web, \textit{Nginx}, qui fait le lien entre la base de donnée \mdb et l'application développée en \symfony. Ceux-ci communiquent à l'aide du driver pdo de la base de donnée. De plus, le bundle Doctrine s'occupe des requêtes \sql de façon transparente.
 
 De l'autre côté nous avons représenté le navigateur web de l'utilisateur. Il pourra afficher les vues envoyées par le protocole HTTP et générées à l'aide du bundle Twig.
 
