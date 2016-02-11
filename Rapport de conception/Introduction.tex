@@ -1,8 +1,8 @@
 \chapter{Introduction}
 
-Notre projet a pour but la création d'une plateforme de gestion des mobilités de l'INSA de Rennes. Celle-ci facilitera l'affectation et le suivit des élèves en mobilité sortante. Elle permettra aussi une meilleure traçabilité des élèves, et l'obtension de données statistiques.
+Notre projet a pour but la création d'une plateforme de gestion des mobilités de l'INSA de Rennes. Celle-ci facilitera l'affectation et le suivi des élèves en mobilité sortante. Elle permettra aussi une meilleure traçabilité des élèves, et l'obtention de données statistiques.
 
-Vous pourrez retrouver le choix des technologies et les spécifications fonctionnelles de notre projet dans les précédents rapports. Pour rappel, notre application Web est développée en \php, à l'aide du framework \symfony. Elle utilise le système de base de données \mdb et est hébergée au Centre de Ressources Informatiques (CRI) sur un serveur \textit{Nginx}. Nous utilisons enfin le système CAS (Central Authentication Service) du CRI pour nous permettre d'authentifier les utilisateurs.
+ Pour rappel, notre application Web est développée en \php, à l'aide du framework \symfony. Elle utilise le système de base de données \mdb et est hébergée au Centre de Ressources Informatiques (CRI) sur un serveur \textit{Nginx}. Nous utilisons enfin le serveur LDAP du CRI pour nous permettre d'authentifier les utilisateurs.
 
 \bigbreak
 
@@ -13,7 +13,9 @@ Notons que notre application est déjà en cours d'utilisation. En effet, nous a
 L'architecture de notre projet sera séparé en trois parties. Nous verrons d'abord l'architecture générale du projet. Nous présenterons ensuite comment s'articulent les différents modules utilisés dans les chapitres 3,4,5 et 6. Nous verrons enfin plus en détail l'architecture de la base de donnée.
 
 \bigbreak
-La figure \ref{useCase} est un rappel du fonctionnement habituel de l'application, et l'avancement du projet par la même occasion. Notons que les fonctionnalités en rouge ne sont pas encore implémentées, et que celles en vert sont en cours d'implémentation ou de test. 
+La figure \ref{useCase} est un rappel du comportement fonctionnel habituel de l'application, et l'avancement du projet par la même occasion. Notons que les fonctionnalités en noir existent déjà dans le prototype, que celles en rouge ne sont pas encore implémentées, et que celles en vert sont en cours d'implémentation ou de test. 
+\bigbreak
+Vous pourrez retrouver le choix des technologies et les spécifications fonctionnelles de notre projet dans les précédents rapports.
 
 \begin{figure}
 	\centering
