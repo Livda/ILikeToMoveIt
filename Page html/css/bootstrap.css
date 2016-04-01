@@ -4964,9 +4964,9 @@ a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: white;
-  background: url(../image/head.jpg) no-repeat;
+  background: url(../image/head.jpg) no-repeat fixed;
   position: relative;
-  background-position: center;
+  background-position:left;
   height: 300px;
   
 }
