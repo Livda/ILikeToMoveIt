@@ -1,0 +1,25 @@
+\chapter{Introduction}
+
+Notre projet a pour but la création d'une plateforme de gestion des mobilités de l'INSA de Rennes. Celle-ci facilitera l'affectation et le suivi des élèves en mobilité sortante. Elle permettra aussi une meilleure traçabilité des élèves, et l'obtention de données statistiques.
+
+ Pour rappel, notre application Web est développée en \php, à l'aide du framework \symfony. Elle utilise le système de base de données \mdb et est hébergée au Centre de Ressources Informatiques (CRI) sur un serveur \textit{Nginx}. Nous utilisons enfin le serveur LDAP du CRI pour nous permettre d'authentifier les utilisateurs.
+
+\bigbreak
+
+Notons que notre application est déjà en cours d'utilisation. En effet, nous avions pour objectif de développer notre projet en parallèle à la gestion des mobilités de cette année. Nous avions donc des contraintes de temps plus fortes, mais aussi de quoi tester notre application en situation réelle. Elle a ainsi été utilisée pour affecter les élèves de 3A et 4A du département informatique cette année. Nous en sommes désormais à l'implémentation de la gestion des documents nécessaires aux mobilités (notamment contrats d'étude).
+
+\bigbreak
+
+L'architecture de notre projet sera séparé en trois parties. Nous verrons d'abord l'architecture générale du projet. Nous présenterons ensuite comment s'articulent les différents modules utilisés dans les chapitres 3,4,5 et 6. Nous verrons enfin plus en détail l'architecture de la base de donnée.
+
+\bigbreak
+La figure \ref{useCase} est un rappel du comportement fonctionnel habituel de l'application, et l'avancement du projet par la même occasion. Notons que les fonctionnalités en noir existent déjà dans le prototype, que celles en rouge ne sont pas encore implémentées, et que celles en vert sont en cours d'implémentation ou de test. 
+\bigbreak
+Vous pourrez retrouver le choix des technologies et les spécifications fonctionnelles de notre projet dans les précédents rapports.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.7]{images/useCaseDiagram.png}
+	\caption{Diagramme de cas d'utilisation de l'application}
+	\label{useCase}
+\end{figure}

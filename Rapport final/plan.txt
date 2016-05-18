@@ -1,0 +1,13 @@
+Chap 1 général :
+Refaire un diagramme structure logicielle avec les bundles + modules externes (LDAP, BDD(via DOCTRINE), JS pour tri)
+Diagramme navigation dans le site (fig1. spec)
+
+
+Parler des bundles
+Chap 2 3 4 5
+Users
+Universités
+Affectations
+FIchiers
+
+BDD Chap 6
