@@ -1,0 +1,32 @@
+\chapter{Découpage}
+Notre projet est composé de 5 Bundles.
+
+\section{Main}
+Ce Bundle est celui qui gère ce qui est en rapport avec les pages d'accueils et les cron, il contiens les entities "générales"
+
+\subsection{Entities}
+\subsubsection{Department}
+Représente les départements, actuellement sont présents les 7 départements de l'insa et le département ALL qui sert pour les limites informatives global à tout les départements et servira probablement pour le service RI si un jour son rôle viens à être ajouté dans l'application.
+
+\subsubsection{Year}
+Représente les années, c'est l'année la plus basse de l'année scolaire qui est stocké, exemple, pour 2015/2016, c'est 2015 qui est dans la base. L'année courante est l'année la plus grande dans la base. Une méthode dans le repository permet de la récupéré directement.
+
+\subsubsection{CronTask}
+Ces objets sont regarder régulièrement parle serveur (toutes les 5/1 0minutes) via Mb/MainBundle/Command/CronTasksRunCommand.php . 
+Si la date de dernière run + interval est dépassé, alors les commandes stocké sont exécutés, la création de nouvelle commande se fait dans le dossier Mb/MainBundle/Command. 
+
+Actuellement il y a la commande main:newYear qui existe, pour crée une nouvelle année fin août. Et rendre les utilisateurs inactifs s'ils ne se sont pas connecté depuis 5 ans.
+
+
+\subsection{Views}
+Il y as deux views dans ce Bundle, une pour la page d'accueil Admin/SuperAdmin et une pour la page d'accueil étudiant.
+
+\subsection{Controller}
+\subsubsection{DepartmentController}
+Contiens les routes pour dérouiller ou déverrouiller la possibilité de faire des voeux pour les étudiants du département de l'utilisateur courant.
+
+\subsubsection{MainController}
+Contiens la redirection vers les bonnes page selon notre niveau d'identification quand on va sur la racine du site.
+Il contiens aussi les méthodes des pages d'accueils.
+
+Une route est désactivée, elle a servie à l'ajout de la CronTask newYear et peux servir pour l'ajout de n'importe quelle nouvelle CronTask.
