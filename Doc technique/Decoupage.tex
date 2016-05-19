@@ -1,7 +1,7 @@
 \chapter{Découpage}
 Notre projet est composé de 5 Bundles.
 
-\section{Main}
+\section{MainBundle}
 Ce Bundle est celui qui gère ce qui est en rapport avec les pages d'accueils et les cron, il contiens les entities "générales"
 
 \subsection{Entities}
@@ -30,3 +30,11 @@ Contiens la redirection vers les bonnes page selon notre niveau d'identification
 Il contiens aussi les méthodes des pages d'accueils.
 
 Une route est désactivée, elle a servie à l'ajout de la CronTask newYear et peux servir pour l'ajout de n'importe quelle nouvelle CronTask.
+
+
+\section{UserBundle}
+Ce Bundle gère les utilisateurs et leur authentification.
+
+\subsection{Entities}
+\subsubsection{User}
+Représente les utilisateurs de la base, cette classe hérite de FOSuser. Plusieurs fonctions de sélections utiles sont présentent dans le repository.
