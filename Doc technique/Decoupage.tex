@@ -106,4 +106,33 @@ Sert à voir/supprimer une université.
 
 \subsubsection{PlaceController}
 Sert à supprimer/éditer/ajouter les places.
-L'import par liste est pas bien fait.
+
+
+\section{AffectBundle}
+\subsection{Entities}
+\subsubsection{Wish}
+Représente un voeux avec une priorité dans une place donnée à une période donnée et à une année donnée.
+
+\subsubsection{Placement}
+Représente une affectation dans une place donnée à une période donnée et à une année donnée. La variable temp signifie pour 2 que le placement a été fait par l'algorithme d'affectation et sera effacé à chaque relance, pour 1 que cela a été verrouiller manuellement et 0 valider RI.
+
+\subsubsection{Agreement}
+Learning Agreement, la variable validate définis'il a été accepté ou pas. Il est relié à un placement
+
+\subsubsection{Subject}
+Matière qui compose un learning Agreement.
+
+\subsection{Views}
+voeux.html.twig , résumé des 3 premiers voeux des étudiants et de leur affectation. Les étudiants ont accès à cette page.
+affectation.html.twig , on vois les affectations et on peux lancer la procédure.
+jury.html.twig génère les fiches de jury.
+
+\subsection{Controller}
+\subsubsection{AgreementController}
+Tout ce qui as rapport avec les learning Agreement.
+
+\subsubsection{WishController}
+Tout ce qui as rapport avec les voeux.
+
+\subsubsection{AffectController}
+Procédure d'affectation, export csv, génération des fiches de jury, affectations manuelles.
