@@ -19,7 +19,7 @@ Actuellement il y a la commande main:newYear qui existe, pour crée une nouvelle
 
 
 \subsection{Views}
-Il y as deux views dans ce Bundle, une pour la page d'accueil Admin/SuperAdmin et une pour la page d'accueil étudiant.
+Il y as trois views dans ce Bundle, une pour la page d'accueil Admin/SuperAdmin, une pour la page d'accueil étudiant et la dernière la page d'identification.
 
 \subsection{Controller}
 \subsubsection{DepartmentController}
@@ -31,10 +31,44 @@ Il contiens aussi les méthodes des pages d'accueils.
 
 Une route est désactivée, elle a servie à l'ajout de la CronTask newYear et peux servir pour l'ajout de n'importe quelle nouvelle CronTask.
 
+\subsubsection{SecurityController}
+Sert à l'identification.
 
 \section{UserBundle}
 Ce Bundle gère les utilisateurs et leur authentification.
 
 \subsection{Entities}
 \subsubsection{User}
-Représente les utilisateurs de la base, cette classe hérite de FOSuser. Plusieurs fonctions de sélections utiles sont présentent dans le repository.
+Représente les utilisateurs de la base, cette classe hérite de FOSuser. Plusieurs fonctions de sélections utile sont présentent dans le repository.
+
+\subsection{Views}
+La seule view sert aux import d'utilisateurs et d'admin quand on est SuperAdmin.
+
+\subsection{Controller}
+\subsubsection{UserController}
+La principale route de ce controller est l'ajout d'étudiant/admin.
+Sont aussi présentes celles pour ajouter une moyenne, un commentaire, supprimer un utilisateur, permettre au SuperAdmin de changer de département.
+
+
+\subsection{Ldap}
+Quand une entité est chargée du ldap via les méthode dans UserController, c'est Mb/Userbundle/Ldap/LdapManager.php qui est appelé.
+Les paramètres du ldap se trouvent dans app/config/config.yml
+
+
+\section{FileBundle}
+\subsection{Entities}
+\subsubsection{FileSend}
+Les fichiers envoyé parles utilisateurs. Possède une méthode PreRemove pour supprimer le fichier du système avant la suppression de l'entité.
+
+\subsubsection{FileToComplete}
+Entité non finie, normalement prévue pour les fichiers à complété pour certains pays/universités, exemple: contrat d'études, contrat de mobilité, formulaire de sécurité sociale Québec, etc.
+
+
+\subsection{Controller}
+\subsubsection{FileController}
+Une seule méthode, pour supprimer un fichier.
+
+
+\section{UniversityBundle}
+\subsection{Entities}
+\subsubsection{Country}
