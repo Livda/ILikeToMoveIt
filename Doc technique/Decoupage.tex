@@ -72,3 +72,34 @@ Une seule méthode, pour supprimer un fichier.
 \section{UniversityBundle}
 \subsection{Entities}
 \subsubsection{Country}
+Représente les pays.
+
+\subsubsection{MobilityPeriod}
+Représente les différentes périodes de mobilités possible (S7,S8,S9,S10,Double diplome).
+
+\subsubsection{University}
+Représente une université, associée à un pays.
+
+\subsubsection{Place}
+Représente une place, c'est à dire une destination possible. Associé à un département, une université et des périodes de mobilités. Le nombre de places disponibles, et le nombre de places restantes. La valeur tempPlaces est initialisé à la valeur de places disponibles à chaque chargement de l'entité, pour faire les affectations.
+Si l'argument places est à -1, cela signifie qu'il n'y as pas de limite de places.
+
+
+\subsubsection{Commentary}
+Devais servir à géré le système de forum sur les pages d'universités.
+
+\subsubsection{Specificity}
+Devais reliés les universités à des spécificités pour par exemple mettre les fileToComplete à disposition.
+
+\subsection{Views}
+ImportFromList est la page qui permet d'importer des universités depuis un csv.
+index est la page d'une université, elle qui devrai contenir une sorte de wiki pour aider les étudiants.
+universitylist est la page de la liste des universités, c'est depuis là que les étudiants font leurs voeux.
+universityListAdmin, c'est la liste des entités Place, cela permet d'en crée et d'en modifier, mais aussi d'en supprimer.
+
+\subsection{Controller}
+\subsubsection{UniversityListController}
+Sert à l'affichage des listes de places, d'université pour les voeux et de l'importation d'universités.
+
+\subsubsection{UniversityController}
+Sert à voir/supprimer une université spécifique et à supprimer/éditer/ajouter les places.
