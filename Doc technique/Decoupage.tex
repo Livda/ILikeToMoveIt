@@ -15,8 +15,7 @@ Représente les années, c'est l'année la plus basse de l'année scolaire qui e
 \subsubsection{CronTask}
 
 Ces objets sont regardés régulièrement par le serveur (toutes les 5/10 minutes) via Mb/MainBundle/Command/CronTasksRunCommand.php. 
-du dernier \textit{run} dépasse \textit{interval}, alors les commandes stockées sont exécutées, la création de nouvelle commande se fait dans le dossier 
-Mb/MainBundle/Command. 
+Si \textit{date dernière run + interval}  est dépassé au moment où le serveur check, alors les commandes stockées dans cet entité sont exécutées, la création de nouvelle commande se fait dans le dossier Mb/MainBundle/Command. 
 
 Actuellement il y a la commande main:newYear qui existe, pour créer une nouvelle année fin août. Et rendre les utilisateurs inactifs s'ils ne se sont pas connectés depuis 5 ans.
 
