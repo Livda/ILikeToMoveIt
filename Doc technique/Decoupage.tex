@@ -2,20 +2,19 @@
 Notre projet est composé de 5 Bundles.
 
 \section{MainBundle}
-Ce Bundle est celui qui gère ce qui est en rapport avec les pages d'accueils et les cron, il contiens les entities "générales"
+Ce Bundle est celui qui gère ce qui est en rapport avec les pages d'accueils et les cron, il contient les entities "générales"
 
 \subsection{Entities}
 \subsubsection{Department}
-Représente les départements, actuellement sont présents les 7 départements de l'insa et le département ALL qui sert pour les limites informatives global à tout les départements et servira probablement pour le service RI si un jour son rôle viens à être ajouté dans l'application.
+Représente les départements. Sont actuellement présents les 7 départements de l'INSA et le département ALL qui sert pour les limites informatives global à tout les départements et servira probablement pour le service RI si un jour son rôle viens à être ajouté dans l'application.
 
 \subsubsection{Year}
 Représente les années, c'est l'année la plus basse de l'année scolaire qui est stocké, exemple, pour 2015/2016, c'est 2015 qui est dans la base. L'année courante est l'année la plus grande dans la base. Une méthode dans le repository permet de la récupéré directement.
 
 \subsubsection{CronTask}
-Ces objets sont regarder régulièrement parle serveur (toutes les 5/1 0minutes) via Mb/MainBundle/Command/CronTasksRunCommand.php . 
-Si la date de dernière run + interval est dépassé, alors les commandes stocké sont exécutés, la création de nouvelle commande se fait dans le dossier Mb/MainBundle/Command. 
+Ces objets sont regardés régulièrement par le serveur (toutes les 5/10 minutes) via Mb/MainBunddu dernier \textit{run} dépasse \textit{interval}, alors les commandes stockées sont exécutées, la création de nouvelle commande se fait dans le dossier Mb/MainBundle/Command. 
 
-Actuellement il y a la commande main:newYear qui existe, pour crée une nouvelle année fin août. Et rendre les utilisateurs inactifs s'ils ne se sont pas connecté depuis 5 ans.
+Actuellement il y a la commande main:newYear qui existe, pour créer une nouvelle année fin août. Et rendre les utilisateurs inactifs s'ils ne se sont pas connectés depuis 5 ans.
 
 
 \subsection{Views}
@@ -23,10 +22,10 @@ Il y as trois views dans ce Bundle, une pour la page d'accueil Admin/SuperAdmin,
 
 \subsection{Controller}
 \subsubsection{DepartmentController}
-Contiens les routes pour dérouiller ou déverrouiller la possibilité de faire des voeux pour les étudiants du département de l'utilisateur courant.
+Contiens les routes pour verrouiller ou déverrouiller la possibilité de faire des vœux pour les étudiants du département de l'utilisateur courant.
 
 \subsubsection{MainController}
-Contiens la redirection vers les bonnes page selon notre niveau d'identification quand on va sur la racine du site.
+Contiens la redirection vers les bonnes pages selon notre niveau d'identification quand on va sur la racine du site.
 Il contiens aussi les méthodes des pages d'accueils.
 
 Une route est désactivée, elle a servie à l'ajout de la CronTask newYear et peux servir pour l'ajout de n'importe quelle nouvelle CronTask.
@@ -39,10 +38,10 @@ Ce Bundle gère les utilisateurs et leur authentification.
 
 \subsection{Entities}
 \subsubsection{User}
-Représente les utilisateurs de la base, cette classe hérite de FOSuser. Plusieurs fonctions de sélections utile sont présentent dans le repository.
+Représente les utilisateurs de la base, cette classe hérite de FOSuser. Plusieurs fonctions de sélections utile sont présentes dans le repository.
 
 \subsection{Views}
-La seule view sert aux import d'utilisateurs et d'admin quand on est SuperAdmin.
+La seule view sert aux imports d'utilisateurs et d'admin quand on est SuperAdmin.
 
 \subsection{Controller}
 \subsubsection{UserController}
@@ -51,14 +50,14 @@ Sont aussi présentes celles pour ajouter une moyenne, un commentaire, supprimer
 
 
 \subsection{Ldap}
-Quand une entité est chargée du ldap via les méthode dans UserController, c'est Mb/Userbundle/Ldap/LdapManager.php qui est appelé.
+Quand une entité est chargée du ldap via les méthodes dans UserController, c'est Mb/Userbundle/Ldap/LdapManager.php qui est appelé.
 Les paramètres du ldap se trouvent dans app/config/config.yml
 
 
 \section{FileBundle}
 \subsection{Entities}
 \subsubsection{FileSend}
-Les fichiers envoyé parles utilisateurs. Possède une méthode PreRemove pour supprimer le fichier du système avant la suppression de l'entité.
+Les fichiers envoyés parles utilisateurs. Possède une méthode PreRemove pour supprimer le fichier du système avant la suppression de l'entité.
 
 \subsubsection{FileToComplete}
 Entité non finie, normalement prévue pour les fichiers à complété pour certains pays/universités, exemple: contrat d'études, contrat de mobilité, formulaire de sécurité sociale Québec, etc.
@@ -75,31 +74,31 @@ Une seule méthode, pour supprimer un fichier.
 Représente les pays.
 
 \subsubsection{MobilityPeriod}
-Représente les différentes périodes de mobilités possible (S7,S8,S9,S10,Double diplome).
+Représente les différentes périodes de mobilités possible (S7,S8,S9,S10,Double diplôme).
 
 \subsubsection{University}
 Représente une université, associée à un pays.
 
 \subsubsection{Place}
-Représente une place, c'est à dire une destination possible. Associé à un département, une université et des périodes de mobilités. Le nombre de places disponibles, et le nombre de places restantes. La valeur tempPlaces est initialisé à la valeur de places disponibles à chaque chargement de l'entité, pour faire les affectations.
+Représente une place, c'est à dire une destination possible. Associée à un département, une université et des périodes de mobilités. Le nombre de places disponibles, et le nombre de places restantes. La valeur tempPlaces est initialisée à la valeur de places disponibles à chaque chargement de l'entité, pour faire les affectations.
 Si l'argument places est à -1, cela signifie qu'il n'y as pas de limite de places.
 
 
 \subsubsection{Commentary}
-Devais servir à géré le système de forum sur les pages d'universités.
+Devait servir à gérer le système de forum sur les pages d'universités.
 
 \subsubsection{Specificity}
-Devais reliés les universités à des spécificités pour par exemple mettre les fileToComplete à disposition.
+Devait relier les universités à des spécificités pour par exemple mettre les fileToComplete à disposition.
 
 \subsection{Views}
 ImportFromList est la page qui permet d'importer des universités depuis un csv.
-index est la page d'une université, elle qui devrai contenir une sorte de wiki pour aider les étudiants.
+index est la page d'une université, elle devait contenir une sorte de wiki pour aider les étudiants.
 universitylist est la page de la liste des universités, c'est depuis là que les étudiants font leurs voeux.
-universityListAdmin, c'est la liste des entités Place, cela permet d'en crée et d'en modifier, mais aussi d'en supprimer.
+universityListAdmin, c'est la liste des entités Place, cela permet d'en créer et d'en modifier, mais aussi d'en supprimer.
 
 \subsection{Controller}
 \subsubsection{UniversityListController}
-Sert à l'affichage des listes de places et d'université pour les voeux.
+Sert à l'affichage des listes de places et d'universités pour les vœux.
 
 \subsubsection{UniversityController}
 Sert à voir/supprimer une université. 
@@ -111,28 +110,28 @@ Sert à supprimer/éditer/ajouter les places.
 \section{AffectBundle}
 \subsection{Entities}
 \subsubsection{Wish}
-Représente un voeux avec une priorité dans une place donnée à une période donnée et à une année donnée.
+Représente un vœux avec une priorité dans une place donnée à une période donnée et à une année donnée.
 
 \subsubsection{Placement}
-Représente une affectation dans une place donnée à une période donnée et à une année donnée. La variable temp signifie pour 2 que le placement a été fait par l'algorithme d'affectation et sera effacé à chaque relance, pour 1 que cela a été verrouiller manuellement et 0 valider RI.
+Représente une affectation dans une place, à une période, et à une année donnée. La variable temp signifie pour 2 que le placement a été fait par l'algorithme d'affectation et sera effacé à chaque relance, pour 1 que cela a été verrouiller manuellement et 0 validé par la commission RI.
 
 \subsubsection{Agreement}
-Learning Agreement, la variable validate définis'il a été accepté ou pas. Il est relié à un placement
+Learning Agreement, la variable validate définit s'il a été accepté ou pas. Il est relié à un placement.
 
 \subsubsection{Subject}
 Matière qui compose un learning Agreement.
 
 \subsection{Views}
-voeux.html.twig , résumé des 3 premiers voeux des étudiants et de leur affectation. Les étudiants ont accès à cette page.
-affectation.html.twig , on vois les affectations et on peux lancer la procédure.
+voeux.html.twig, résumé des 3 premiers vœux des étudiants et de leur affectation. Les étudiants ont accès à cette page.
+affectation.html.twig, on voit les affectations et on peux lancer la procédure.
 jury.html.twig génère les fiches de jury.
 
 \subsection{Controller}
 \subsubsection{AgreementController}
-Tout ce qui as rapport avec les learning Agreement.
+Tout ce qui a rapport avec les learning Agreement.
 
 \subsubsection{WishController}
-Tout ce qui as rapport avec les voeux.
+Tout ce qui a rapport avec les vœux.
 
 \subsubsection{AffectController}
 Procédure d'affectation, export csv, génération des fiches de jury, affectations manuelles.
