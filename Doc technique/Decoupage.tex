@@ -1,3 +1,4 @@
+
 \chapter{Découpage}
 Notre projet est composé de 5 Bundles.
 
@@ -12,7 +13,7 @@ Représente les départements, actuellement sont présents les 7 départements d
 Représente les années, c'est l'année la plus basse de l'année scolaire qui est stocké, exemple, pour 2015/2016, c'est 2015 qui est dans la base. L'année courante est l'année la plus grande dans la base. Une méthode dans le repository permet de la récupéré directement.
 
 \subsubsection{CronTask}
-Ces objets sont regarder régulièrement parle serveur (toutes les 5/1 0minutes) via Mb/MainBundle/Command/CronTasksRunCommand.php . 
+Ces objets sont regarder régulièrement parle serveur (toutes les 5/1 0minutes) via  Mb/MainBundle/Command/CronTasksRunCommand.php . 
 Si la date de dernière run + interval est dépassé, alors les commandes stocké sont exécutés, la création de nouvelle commande se fait dans le dossier Mb/MainBundle/Command. 
 
 Actuellement il y a la commande main:newYear qui existe, pour crée une nouvelle année fin août. Et rendre les utilisateurs inactifs s'ils ne se sont pas connecté depuis 5 ans.
@@ -51,11 +52,13 @@ Sont aussi présentes celles pour ajouter une moyenne, un commentaire, supprimer
 
 
 \subsection{Ldap}
-Quand une entité est chargée du ldap via les méthode dans UserController, c'est Mb/Userbundle/Ldap/LdapManager.php qui est appelé.
+Quand une entité est chargée du ldap via les méthode dans UserController, c'est  Mb/Userbundle/Ldap/LdapManager.php qui est appelé.
 Les paramètres du ldap se trouvent dans app/config/config.yml
 
 
 \section{FileBundle}
+Gère les fichiers.
+
 \subsection{Entities}
 \subsubsection{FileSend}
 Les fichiers envoyé parles utilisateurs. Possède une méthode PreRemove pour supprimer le fichier du système avant la suppression de l'entité.
@@ -70,6 +73,7 @@ Une seule méthode, pour supprimer un fichier.
 
 
 \section{UniversityBundle}
+Gère les universités, les places (jetons) disponibles.
 \subsection{Entities}
 \subsubsection{Country}
 Représente les pays.
@@ -109,6 +113,7 @@ Sert à supprimer/éditer/ajouter les places.
 
 
 \section{AffectBundle}
+Gère les voeux, les affectations, les Learning Agreements.
 \subsection{Entities}
 \subsubsection{Wish}
 Représente un voeux avec une priorité dans une place donnée à une période donnée et à une année donnée.
@@ -136,3 +141,4 @@ Tout ce qui as rapport avec les voeux.
 
 \subsubsection{AffectController}
 Procédure d'affectation, export csv, génération des fiches de jury, affectations manuelles.
+
