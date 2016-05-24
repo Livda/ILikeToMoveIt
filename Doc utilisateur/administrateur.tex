@@ -121,7 +121,7 @@ Cette sur cette page que l'administrateur arrive à sa connexion. Depuis ce hub,
    	\item en cliquant sur ce bouton vous êtes redirigé vers la page d'affectation des élèves (cf \ref{ae},)
    	\item en cliquant sur le bouton vert permet de verrouiller ou déverrouiller l'affectation temporaire actuelle de tous les élèves afin qu'il ne change plus si on relance la procédure d'affectation. Pour plus d'information sur la procédure d'affectation veuillez vous référer à la section \ref{afv},
    	\item en cliquant sur ce bouton vous pouvez accéder à la fiche de l'université,
-   	\item en cliquant sur ce bouton vous pouvez accéder à la fiche de l'élève correspondant à la ligne du bouton.
+   	\item en cliquant sur ce bouton vous pouvez accéder à la fiche de l'élève correspondant à la ligne du bouton (cf \ref{ev}, \ref{en}, \ref{ef})..
 	\end{enumerate}
    
     \subsection{Affectation des élèves}
@@ -138,12 +138,12 @@ Cette sur cette page que l'administrateur arrive à sa connexion. Depuis ce hub,
              	\item en cliquant sur ce bouton vous êtes redirigé vers la page de liste des vœux (cf \ref{lv}),
              	\item en cliquant sur ce bouton vous verrouillez tous les élèves ayant fait des vœux afin que leurs vœux ne changent pas à la prochaine affectation. Pour plus d'information sur la procédure d'affectation veuillez vous référer à la section \ref{afv}, 
              	\item en cliquant sur ce bouton vous déverrouillez tous les élèves ayant fait des vœux afin que leurs vœux changent à la prochaine affectation. Pour plus d'information sur la procédure d'affectation veuillez vous référer à la section \ref{afv}, 
-             	\item ce tableau exprime à chaque itérations de l'algorithme les statistiques d'affectations.
+             	\item ce tableau exprime à chaque itérations de l'algorithme les statistiques d'affectations,
              	\item en cliquant sur un université vous pouvez accéder à la fiche de l'université (cf \ref{fu}), 
              	\item en cliquant sur ce bouton vous pouvez verrouiller ou déverrouiller la destination d'un élève afin qu'elle soit ou non modifier lors de la procédure d'affectation. Pour plus d'information sur la procédure d'affectation veuillez vous référer à la section \ref{afv},
-             	\item 
-             	\item 
-             	\item 
+             	\item ce bouton permet de valider définitivement un élève à sa destination lors de la commission RI. En cas d'erreur il est possible d'invalider un élève en cliquant sur le nouveau bouton "Retirer RI"
+             	\item en cliquant sur ce bouton, l'élève voit l'ensemble de ses vœux supprimés et ne peux alors plus partir. néanmoins il reste présent dans la liste des élève et est pris en compte lors de l'algorithme. Pour plus d'information sur la procédure d'affectation veuillez vous référer à la section \ref{afv},
+			   	\item en cliquant sur ce bouton vous pouvez accéder à la fiche de l'élève correspondant à la ligne du bouton (cf \ref{ev}, \ref{en}, \ref{ef}).
              \end{enumerate}
     
          \subsection{Page étudiant : Vœux}
@@ -155,18 +155,18 @@ Cette sur cette page que l'administrateur arrive à sa connexion. Depuis ce hub,
          	
          \end{figure}
                       \begin{enumerate}
-                      	\item
-                      	\item
-                      	\item
-                      	\item
-                      	\item
-                      	\item
-                      	\item
-                      	\item
-                      	\item
-                      	\item
-                      	\item
-                      	\item
+                      	\item \att ce bouton supprime définitivement un élève de la base de donnée,
+                      	\item ce bouton redirige vers la page de gestion des voeux (cf \ref{lv}),
+                      	\item ce bouton redirige vers la page d'affectation (cf \ref{ae}),
+                      	\item accès à la liste des universités dans laquelle les élèves sélectionnent leurs vœux (cf \ref{listuniv}),
+                     	\item lien vers la liste des étudiants de votre département avec leurs vœux ordonnés,
+                      	\item lien vers l'université,
+                      	\item flèches permettant de changer l'ordre d'un vœux (monter ou descendre l'ordre de priorité du vœux).
+                      	\item cliquez sur ce bouton pour supprimer cette destination de la liste de vos vœux, 
+                      	\item ce bouton verrouille ou déverrouille le vœux de l'étudiant afin que celui-ci ne bouge plus lors de la phase d'affectation. Pour plus d'information sur la procédure d'affectation veuillez vous référer à la section \ref{afv},
+                      	\item ce bouton permet de valider directement l'affectation de l'élève définitivement, lui permettant ainsi de déposer des contrats d'études. Pour plus d'information sur la procédure d'affectation veuillez vous référer à la section \ref{afv},
+                      	\item en cliquant sur ce bouton, l'élève voit l'ensemble de ses vœux supprimés et ne peux alors plus partir. néanmoins il reste présent dans la liste des élève et est pris en compte lors de l'algorithme. Pour plus d'information sur la procédure d'affectation veuillez vous référer à la section \ref{afv},
+                      	\item en replissant le champs avec une nouvelle valeur et en cliquant sur le bouton à droite, vous pouvez modifier la note de l'élève.
                       \end{enumerate}
 
          
@@ -180,12 +180,12 @@ Cette sur cette page que l'administrateur arrive à sa connexion. Depuis ce hub,
      	
      \end{figure}
      \begin{enumerate}
-     	\item
-     	\item
-     	\item
-     	\item
-     	\item
-     	\item
+     	\item lorsque un élève dépose un contrat d'étude, vous pouvez le valider ou l'invalider en cliquant sur le bouton correspondant. En cas de refus, vous pouvez écrire une raison du refus dans le champs a droite avant de cliquer sur le bouton,
+     	\item en cliquant sur ce bouton vous pouvez supprimer un contrat d'étude auparavant validé 
+     	\item dans cette case vous pouvez rentrer manuellement les notes de l'élève,
+     	\item en cochant cette case, vous assurez que la note obtenue par l'élève permet de valider cette matière pour les fiches de jury,
+     	\item cliquez sur ce bouton pour valider les changements apportez aux notes de l'élève,
+     	\item dans cette section vous pouvez entrer manuellement un contrat d'étude pour l'élève et le valider directement.
      \end{enumerate}
      
      
@@ -193,14 +193,14 @@ Cette sur cette page que l'administrateur arrive à sa connexion. Depuis ce hub,
           \label{ef}
           \begin{figure}[H]
           	\centering
-          	\includegraphics[width=12cm,height=8cm]{Images/Admin/ajout_fichier_admin.png}
+          	\includegraphics[width=12cm,height=7cm]{Images/Admin/ajout_fichier_admin.png}
           	\caption{Page étudiant : Dépôt de fichier}
           	
           \end{figure}
            \begin{enumerate}
-           	\item
-           	\item
-           	\item
+           	\item dans ce champs, vous devez écrire le nom que vous voulez donner au fichier que vous allez déposer sur le site,
+           	\item en cliquant sur ce bouton vous ouvrez votre explorateur de fichier pour sélectionner le fichier à déposer
+           	\item en cliquant sur ce bouton vous déposer le fichier sur le site.
            \end{enumerate}
           
           \subsection{Ajout d'étudiants}
@@ -211,6 +211,12 @@ Cette sur cette page que l'administrateur arrive à sa connexion. Depuis ce hub,
           	\caption{Ajout d'étudiants}
           	
           \end{figure}
+          \begin{enumerate}
+          	\item en cliquant sur ce bouton vous ouvrez votre explorateur de fichier pour sélectionner le fichier CSV contenant la liste des élèves à ajouter. Pour plus d'information sur l'ajout de plusieurs élèves veuillez vous référer à la section \ref{ael}
+          	\item en cliquant sur ce bouton vous valider l'import du CSV et ajouter la liste des élèves dans la base de données.
+          	\item dans cette case vous pouvez entrer le numéro d'étudiant ou l'adresse mail INSA de ce dernier pour l'ajouter à la base de données
+          	\item cliquez sur ce bouton pour que l'action d'ajouter un élève soit prise en compte.
+          \end{enumerate}
                
         
 
@@ -246,7 +252,12 @@ Cette méthode doit être utilisée si on souhaite donner un nombre de départs 
 \subsection{Ajouter plusieurs universités} 
 \label{au}
 
-Depuis la page d'accueil \ref{aa} cliquez sur le lien "Ajoutez plusieurs universités d'un coup". Sur cette page, vous devez uploader un fichier CSV ayant le format décrit dans la case "Format". \att le fichier CSV doit être enregistré au format UTF-8 pour que l'import fonctionne correctement). Choississez le séparateur correspondant à votre fichier CSV puis cliquer sur valider.
+Depuis la page d'accueil \ref{aa} cliquez sur le lien "Ajoutez plusieurs universités d'un coup". Sur cette page, vous devez uploader un fichier CSV ayant le format décrit dans la case "Format". \att le fichier CSV doit être enregistré au format UTF-8 pour que l'import fonctionne correctement). Choisissez le séparateur correspondant à votre fichier CSV puis cliquer sur valider.
+
+\section{ajouter des élèves}
+\label{ael}
+
+//////////////////////////////////
 
 \section{Gestion manuelle des vœux des étudiants}
 
