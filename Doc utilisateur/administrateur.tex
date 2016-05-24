@@ -258,7 +258,12 @@ Depuis la page d'accueil \ref{aa} cliquez sur le lien "Ajoutez plusieurs univers
 \section{ajouter des élèves}
 \label{ael}
 
-//////////////////////////////////
+\subsection{ajouter les élèves un à un}
+Depuis la page d'accueil (cf \ref{aa}), cliquez sur le lien "Ajouter des étudiants" (cf \ref{aa}-6). Une fois sur la page (cf \ref{aet}), dans la section "Ajouter juste une personne", entrez soit le numéro d'étudiant ou l'adresse mail de l'étudiant que vous souhaitez ajouter et cliquez sur "envoyer" pour valider l'ajout de l'élève.
+
+\subsection{ajouter plusieurs élèves d'un coup}
+Avant toute choses, vous devez vous munir d'un fichier de type CSV possédant le format suivant expliqué sur la page d'ajout des étudiants (cf \ref{aet}).
+Pour accéder à cette page depuis la page d'accueil (cf \ref{aa}), cliquez sur le lien "Ajouter des étudiants" (cf \ref{aa}-6). Une fois sur la page (cf \ref{aet}), dans la section "Ajouter plusieurs étudiants", cliquez sur "choisissez un fichier" (cf \ref{aet}-1) puis sélectionnez votre fichier CSV ensuite cliquez sur "envoyer" (cf \ref{aet}-2) pour valider l'ajout de tous les élèves d'un coup. 
 
 \section{Gestion manuelle des vœux des étudiants}
 
@@ -271,7 +276,15 @@ Depuis la page d'accueil \ref{aa} cliquez sur le lien "Gérer les affectations".
 \section{Affectation des vœux}
 \label{afv}
 
-Sur la page de gestion des affectation (cf paragraphe précédent"), tout d'abords //////////////////////////////////////
+\subsection{Affectation automatique}
+Depuis la page d'accueil (cf \ref{aa}) cliquez sur le lien "Gérer les affectations" (cf \ref{aa}-5). Une fois sur la page, il vous suffit de lancer l'affectation pour que tous les élèves ayant fait des vœux soient affectés par l'algorithme au meilleur possible de leurs vœux. Pour cela, choisissez d'abords l'algorithme de votre choix (cf \ref{ae}-1) parmi les 2 proposés. D'abord le 3 et 4 alterné qui tri tous les élèves selon leur moyenne du plus fort au plus faible en alternant un 4ème année avec un 3ème année. Le second algorithme place d'abords tous les 4ème années selon leur moyenne puis les 3ème années. Une fois le choix fait, cliquez sur "lancer la procédure d'affectation".
+
+\subsection{Verrouiller des vœux}
+Une fois la première affectation effectuée (ou depuis la page de chaque étudiant accessible en cliquant sur "Accéder à l'étudiant" (cf \ref{ae}-11)) vous pouvez choisir de verrouiller la destination d'un étudiant. Ceci a pour effet de figer sa destination, permettant ainsi lors de la prochaine affectation de donner automatiquement cette destination à l'élève. Depuis la page d'affectation vous ne pouvez verrouiller que la destination à laquelle il a été affecté par l'algorithme mais depuis la page de l'étudiant, il est possible de le verrouiller sur n'importe lequel de ses vœux.
+\att, après avoir terminer les affectations manuelles, pensez à relancer l'affectation automatique pour éviter les erreur de cohérence dans les destinations (par exemple un dépassement de départs pour une destination).
+
+\subsection{Valider définitivement un élève}
+Lors de la commission RI vous pourrez valider définitivement les élèves en cliquant simplement sur le bouton "Valider RI" (cf \ref{ae}-9). une fois validé par la commission RI, l'élève pourra déposer un contrat d'études.
 
 \section{Liste de mails}
 
